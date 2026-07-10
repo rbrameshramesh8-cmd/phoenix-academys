@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Phoenix Academy by Phoenix Ventures Group offers job-oriented IT training, Java Full Stack, Python Developer, Digital Marketing, UI/UX Web Developer, MERN Full Stack, real-time project training, internship training and placement support in Bangalore.">
+  <meta name="keywords" content="Phoenix Academy, Phoenix Ventures Group, IT training institute, software training institute, Java Full Stack course, Python Developer course, Digital Marketing course, UI/UX Web Developer course, MERN Full Stack course, placement training, real-time project training, internship training, job-oriented courses, Bangalore IT training">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Phoenix Academy | Premium IT Training Institute">
+  <meta property="og:description" content="Job-oriented IT courses with real-time projects, internships, demo classes and placement support.">
+  <meta property="og:image" content="/images/logo.png">
+  <title>Contact Us | Phoenix Academy</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+
+<!-- PAGE HERO -->
+<section class="page-hero green-page-hero grid-bg" style="min-height:300px;position:relative;overflow:hidden">
+  <div class="blob" style="width:400px;height:400px;background:var(--primary);top:-200px;right:-100px"></div>
+  <div class="wrap" style="padding:60px 24px;text-align:center;position:relative;z-index:1">
+    <div class="section-tag fade-in">GET IN TOUCH</div>
+    <h1 class="fade-in" style="font-size:2.6rem;font-weight:900;margin:16px 0;line-height:1.1" data-delay="1">
+      START YOUR<br><span class="gradient-text">JOURNEY TODAY</span>
+    </h1>
+    <p class="fade-in" style="color:#475569;font-size:0.72rem;max-width:500px;margin:0 auto;line-height:2" data-delay="2">
+      Have questions about courses, fees, placements, demo sessions, or admissions? Click location, phone, Gmail, or WhatsApp to connect instantly.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT LAYOUT -->
+<section style="padding:80px 0;background:var(--bg)">
+  <div class="wrap">
+    <div class="grid-contact" style="display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:start">
+
+      <!-- FORM -->
+      <div class="fade-in" data-delay="1">
+        <div style="font-size:0.65rem;color:var(--primary);font-weight:700;letter-spacing:0.15em;margin-bottom:10px">SEND A MESSAGE</div>
+        <h2 style="font-size:1.6rem;font-weight:900;margin-bottom:8px">WE'LL REPLY IN <span class="gradient-text">24 HOURS</span></h2>
+        <p style="color:#475569;font-size:0.65rem;line-height:2;margin-bottom:32px">Fill out the form and our admissions team will get back to you with all the information you need.</p>
+
+        <div id="contact-form">
+          <div class="input-row">
+            <div class="form-group">
+              <label class="form-label">FULL NAME *</label>
+              <input type="text" id="c-name" class="form-input" placeholder="Your full name">
+            </div>
+            <div class="form-group">
+              <label class="form-label">PHONE NUMBER</label>
+              <input type="tel" id="c-phone" class="form-input" placeholder="9XXXXXXXXX">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">EMAIL ADDRESS *</label>
+            <input type="email" id="c-email" class="form-input" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">INTERESTED COURSE</label>
+            <select id="c-course" class="form-input">
+                <option value="">Select a course</option>
+                <option>Java Full Stack</option>
+                <option>Python Developer</option>
+                <option>Digital Marketing</option>
+                <option>UI/UX Web Developer</option>
+                <option>MERN Full Stack</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">COURSE DURATION</label>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px">
+              <label id="c-dur-3m-label" onclick="cSelectDuration('3 Months')" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border:2px solid var(--border);border-radius:10px;cursor:pointer;font-size:0.68rem;font-weight:700;letter-spacing:0.05em;transition:all 0.2s">
+                <img src="/assets/icons/timer.png" alt="" class="duration-icon"> 3 MONTHS
+              </label>
+              <label id="c-dur-6m-label" onclick="cSelectDuration('6 Months')" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border:2px solid var(--border);border-radius:10px;cursor:pointer;font-size:0.68rem;font-weight:700;letter-spacing:0.05em;transition:all 0.2s">
+                <img src="/assets/icons/calendar-check.png" alt="" class="duration-icon"> 6 MONTHS
+              </label>
+            </div>
+            <input type="hidden" id="c-duration" value="">
+          </div>
+          <div class="form-group">
+            <label class="form-label">YOUR MESSAGE *</label>
+            <textarea id="c-message" class="form-input" rows="5" placeholder="Tell us about your background, goals, and any questions you have..."></textarea>
+          </div>
+          <button onclick="submitContact()" class="btn-primary" style="width:100%;justify-content:center" id="contact-btn">SEND MESSAGE →</button>
+          <p style="font-size:0.6rem;color:#475569;margin-top:12px;text-align:center">By submitting, you agree to be contacted by our admissions team. We never spam.</p>
+        </div>
+
+        <div id="contact-success" style="display:none;text-align:center;padding:40px;background:rgba(10,102,194,0.08);border:1px solid rgba(10,102,194,0.3);border-radius:16px">
+          <div style="font-size:3rem;margin-bottom:16px"><img src="/assets/icons/check-circle.png" alt="" class="icon-xl"> </div>
+          <h3 style="font-size:0.9rem;font-weight:900;color:#2563eb;margin-bottom:8px">MESSAGE SENT!</h3>
+          <p style="color:#475569;font-size:0.68rem;line-height:2">Thank you! Our counsellor will call you within 24 hours. In the meantime, feel free to WhatsApp us for faster response.</p>
+          <a href="https://wa.me/919986762311?text=Hi%20Phoenix%20Academy%2C%20I%20am%20interested%20in%20your%20courses." target="_blank" class="btn-primary" style="margin-top:20px;display:inline-flex"><img src="/assets/icons/whatsapp.png" alt="" class="inline-icon">WHATSAPP US →</a>
+        </div>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="fade-in" data-delay="2">
+        <div class="contact-info-list">
+          <a class="card contact-action-card" href="https://www.google.com/maps/search/?api=1&query=12.8917471,77.6388388" target="_blank" rel="noopener" aria-label="Open Phoenix Academy live location in Google Maps">
+            <div class="contact-icon-box contact-location-icon"><img src="/assets/icons/map-pin.png" alt="Location"></div>
+            <div>
+              <div class="contact-label">LOCATION</div>
+              <div class="contact-title">Phoenix Academy</div>
+              <div class="contact-text">Bangalore Kudlu Gate, 1st Floor<br>Bangalore — 560068, Karnataka, India</div>
+              <div class="contact-mini-action"><img src="/assets/icons/external-link.png" alt="" class="duration-icon"> Click to open live location</div>
+            </div>
+          </a>
+          <a class="card contact-action-card" href="tel:+919986762311" aria-label="Call Phoenix Academy phone number">
+            <div class="contact-icon-box contact-phone-icon"><img src="/assets/icons/phone-call.png" alt="Phone"></div>
+            <div>
+              <div class="contact-label phone-label">PHONE / WHATSAPP</div>
+              <div class="contact-title large">+91 99867 62311</div>
+              <div class="contact-text">Mon–Sat: 9am–8pm · Sun: 10am–6pm</div>
+              <div class="contact-mini-action"><img src="/assets/icons/phone.png" alt="" class="duration-icon"> Click to open call dial</div>
+            </div>
+          </a>
+          <a class="card contact-action-card" href="https://mail.google.com/mail/?view=cm&fs=1&to=info%40phoenixacademys.com&su=Phoenix%20Academy%20Enquiry&body=Hi%20Phoenix%20Academy%2C%20I%20want%20to%20know%20about%20courses%2C%20demo%20sessions%20and%20admissions." target="_blank" rel="noopener" aria-label="Send email to Phoenix Academy using Gmail">
+            <div class="contact-icon-box contact-email-icon"><img src="/assets/icons/mail.png" alt="Email"></div>
+            <div>
+              <div class="contact-label email-label">EMAIL</div>
+              <div class="contact-title email-title">info@phoenixacademys.com</div>
+              <div class="contact-text">Admissions, placements &amp; general queries</div>
+              <div class="contact-mini-action"><img src="/assets/icons/email-send.png" alt="" class="duration-icon"> Click to open Gmail compose</div>
+            </div>
+          </a>
+          <div class="card contact-action-card no-click">
+            <div class="contact-icon-box contact-hours-icon"><img src="/assets/icons/clock.png" alt="Working hours"></div>
+            <div>
+              <div class="contact-label hours-label">WORKING HOURS</div>
+              <div class="contact-title">Weekdays: 9:00 AM – 8:00 PM</div>
+              <div class="contact-title small">Weekends: 10:00 AM – 6:00 PM</div>
+              <div class="contact-text">Demo sessions available by appointment</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Connect buttons -->
+        <div class="quick-connect-grid">
+          <a href="tel:+919986762311" class="quick-connect call"><img src="/assets/icons/phone-call.png" alt="" class="duration-icon">CALL NOW</a>
+          <a href="https://wa.me/919986762311?text=Hi%20Phoenix%20Academy%2C%20I%20am%20interested%20in%20your%20courses." target="_blank" rel="noopener" class="quick-connect whatsapp"><img src="/assets/icons/whatsapp.png" alt="" class="duration-icon">WHATSAPP CHAT</a>
+          <a href="/demo" class="quick-connect demo"><img src="/assets/icons/target.png" alt="" class="duration-icon">BOOK FREE DEMO</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REAL GOOGLE MAP LOCATION -->
+<section class="map-location-section" style="padding:60px 0;background:var(--bg2)">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center;margin-bottom:24px">
+      <div class="section-tag fade-in">MAP LOCATION</div>
+      <h2 class="fade-in" data-delay="1" style="font-size:1.8rem;font-weight:900;margin-top:12px">VISIT <span class="gradient-text">PHOENIX ACADEMY</span></h2>
+      <p class="fade-in" data-delay="2" style="color:#475569;font-size:0.68rem;line-height:2;max-width:620px;margin:10px auto 0">
+        Bangalore Kudlu Gate, 1st Floor — click the map or button to open the live route in Google Maps.
+      </p>
+    </div>
+
+    <div class="google-map-card fade-in" data-delay="3">
+      <iframe
+        class="map-iframe"
+        title="Phoenix Academy Bangalore Kudlu Gate Map"
+        src="https://www.google.com/maps?q=12.8917471,77.6388388&z=16&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+      <div class="map-info-bar">
+        <div>
+          <div class="map-city">BANGALORE</div>
+          <div class="map-address">Kudlu Gate, 1st Floor · 12.8917471, 77.6388388</div>
+        </div>
+        <a class="btn-primary map-open-button" href="https://www.google.com/maps/search/?api=1&query=12.8917471,77.6388388" target="_blank" rel="noopener">
+          <img src="/assets/icons/map-pin.png" alt="" class="inline-icon">OPEN LIVE LOCATION →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- UPCOMING COURSE SESSIONS + PAYMENT -->
+<section class="contact-upcoming-sessions-section" style="padding:64px 0;background:var(--bg)">
+  <div class="wrap">
+    <div class="grid-2col" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;align-items:stretch">
+      <div class="fade-in">
+        <!-- Upcoming sessions -->
+        <div class="upcoming-session-card contact-session-card" style="background:rgba(37,99,235,0.04);border:1px solid rgba(0,0,0,0.07);border-radius:16px;padding:24px">
+          <div style="font-size:0.62rem;font-weight:700;color:var(--primary);letter-spacing:0.12em;margin-bottom:16px"><img src="/assets/icons/lightning.png" alt="" class="inline-icon">SELECT DEMO COURSE</div>
+          <div style="display:flex;flex-direction:column;gap:0">
+            <div class="session-book-row" style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)">
+              <div>
+                <div class="session-course-title"><img src="/assets/course_icons/java-full-stack-development.png" alt="" class="inline-icon">Java Full Stack</div>
+                <div class="session-course-slot">Demo Appointment Request</div>
+              </div>
+              <button type="button" class="session-book-btn" onclick="bookCourseSession('Java Full Stack','Demo Appointment Request')">BOOKING →</button>
+            </div>
+            <div class="session-book-row" style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)">
+              <div>
+                <div class="session-course-title"><img src="/assets/course_icons/python-development.png" alt="" class="inline-icon">Python Developer</div>
+                <div class="session-course-slot">Demo Appointment Request</div>
+              </div>
+              <button type="button" class="session-book-btn" onclick="bookCourseSession('Python Developer','Demo Appointment Request')">BOOKING →</button>
+            </div>
+            <div class="session-book-row" style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)">
+              <div>
+                <div class="session-course-title"><img src="/assets/course_icons/digital-marketing.png" alt="" class="inline-icon">Digital Marketing</div>
+                <div class="session-course-slot">Demo Appointment Request</div>
+              </div>
+              <button type="button" class="session-book-btn" onclick="bookCourseSession('Digital Marketing','Demo Appointment Request')">BOOKING →</button>
+            </div>
+            <div class="session-book-row" style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)">
+              <div>
+                <div class="session-course-title"><img src="/assets/course_icons/ui-ux-design.png" alt="" class="inline-icon">UI/UX Web Developer</div>
+                <div class="session-course-slot">Demo Appointment Request</div>
+              </div>
+              <button type="button" class="session-book-btn" onclick="bookCourseSession('UI/UX Web Developer','Demo Appointment Request')">BOOKING →</button>
+            </div>
+            <div class="session-book-row" style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)">
+              <div>
+                <div class="session-course-title"><img src="/assets/course_icons/mern-full-stack-development.png" alt="" class="inline-icon">MERN Full Stack</div>
+                <div class="session-course-slot">Demo Appointment Request</div>
+              </div>
+              <button type="button" class="session-book-btn" onclick="bookCourseSession('MERN Full Stack','Demo Appointment Request')">BOOKING →</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="payment-contact-card fade-in" data-delay="2">
+        <div class="section-tag"><img src="/assets/icons/lightning.png" alt="" class="inline-icon">PAYMENT OPTION</div>
+        <h2>Buy Course with EMI Advance</h2>
+        <p>Click Buy Course, select 3 Months or 6 Months, pay full amount or 50% advance, and send payment notification to WhatsApp. Remaining balance reminder is clearly shown for 20 days.</p>
+        <div class="contact-pay-points">
+          <div><strong>3 Months:</strong> ₹14,999 total · ₹7,500 advance</div>
+          <div><strong>6 Months:</strong> ₹29,999 total · ₹15,000 advance</div>
+          <div><strong>Reminder:</strong> balance payment after 20 days</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:16px">
+          <button type="button" class="btn-primary" onclick="openPaymentModal('General Course')">BUY A COURSE →</button>
+          <a class="btn-outline" target="_blank" rel="noopener" href="https://wa.me/919986762311?text=Hi%20Phoenix%20Academy%2C%20I%20want%20to%20book%20a%20course%20and%20pay%20with%20EMI%20advance."><img src="/assets/icons/whatsapp.png" alt="" class="inline-icon">WHATSAPP PAYMENT SUPPORT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<div id="toast" class="toast"></div>
+<div id="enroll-modal" class="modal-overlay">
+  <div class="modal-box">
+    <button onclick="closeModal()" style="position:absolute;top:16px;right:16px;background:none;border:none;color:#475569;cursor:pointer;font-size:1.4rem">✕</button>
+    <div style="font-size:0.62rem;color:var(--primary);letter-spacing:0.15em;margin-bottom:8px"><img src="/assets/icons/lightning.png" alt="" class="inline-icon">ENROLL NOW</div>
+    <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:6px">Reserve Your Seat</h3>
+    <div id="modal-course-name" style="font-size:0.68rem;color:#475569;margin-bottom:24px"></div>
+    <div class="form-group"><label class="form-label">FULL NAME *</label><input type="text" id="enroll-name" class="form-input" placeholder="Your full name"></div>
+    <div class="input-row">
+      <div class="form-group"><label class="form-label">EMAIL *</label><input type="email" id="enroll-email" class="form-input" placeholder="your@email.com"></div>
+      <div class="form-group"><label class="form-label">PHONE *</label><input type="tel" id="enroll-phone" class="form-input" placeholder="9XXXXXXXXX"></div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">COURSE DURATION *</label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <label id="dur-3m-label" onclick="selectDuration('3 Months')" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border:2px solid var(--border);border-radius:10px;cursor:pointer;font-size:0.68rem;font-weight:700;letter-spacing:0.05em;transition:all 0.2s">
+          <img src="/assets/icons/timer.png" alt="" class="duration-icon"> 3 MONTHS · ₹14,999
+        </label>
+        <label id="dur-6m-label" onclick="selectDuration('6 Months')" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border:2px solid var(--border);border-radius:10px;cursor:pointer;font-size:0.68rem;font-weight:700;letter-spacing:0.05em;transition:all 0.2s">
+          <img src="/assets/icons/calendar-check.png" alt="" class="duration-icon"> 6 MONTHS · ₹29,999
+        </label>
+      </div>
+      <input type="hidden" id="enroll-duration" value="">
+    </div>
+    <button onclick="submitEnroll()" class="btn-primary" style="width:100%;justify-content:center;margin-top:8px" id="enroll-btn">CONFIRM ENROLLMENT →</button>
+  </div>
+</div>
+<a href="https://wa.me/919986762311?text=Hi%20Phoenix%20Academy%2C%20I%20am%20interested%20in%20your%20courses." target="_blank" class="whatsapp-fab">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+<a href="#" class="back-top" id="back-top">↑</a>
+<script src="/js/components.js"></script>
+<script src="/js/main.js"></script>
+<script>
+function cSelectDuration(val){
+  document.getElementById('c-duration').value=val;
+  const l3=document.getElementById('c-dur-3m-label');
+  const l6=document.getElementById('c-dur-6m-label');
+  if(val==='3 Months'){
+    l3.style.border='2px solid var(--primary)';l3.style.background='rgba(37,99,235,0.08)';l3.style.color='var(--primary)';
+    l6.style.border='2px solid var(--border)';l6.style.background='transparent';l6.style.color='';
+  } else {
+    l6.style.border='2px solid var(--primary)';l6.style.background='rgba(37,99,235,0.08)';l6.style.color='var(--primary)';
+    l3.style.border='2px solid var(--border)';l3.style.background='transparent';l3.style.color='';
+  }
+}
+async function submitContact(){
+  const name=document.getElementById('c-name').value.trim();
+  const email=document.getElementById('c-email').value.trim();
+  const phone=document.getElementById('c-phone').value.trim();
+  const course=document.getElementById('c-course').value;
+  const duration=document.getElementById('c-duration').value;
+  const message=document.getElementById('c-message').value.trim();
+  if(!name||!email||!message){showToast('Please fill Name, Email and Message.','error');return;}
+  if(phone && typeof isValidIndianMobile === 'function' && !isValidIndianMobile(phone)){showToast('Phone number must be exactly 10 digits.','error');return;}
+  const btn=document.getElementById('contact-btn');
+  btn.disabled=true;btn.textContent='SENDING...';
+  try{
+    const res=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email,phone,course,duration,message})});
+    const data=await res.json();
+    if(data.success){
+      document.getElementById('contact-form').style.display='none';
+      document.getElementById('contact-success').style.display='block';
+      openLeadWhatsApp('Contact Message',{name,email,phone,course,duration,message});
+      showToast('Message sent to email + WhatsApp. ✅','success');
+    }else{showToast(data.message||'Something went wrong.','error');}
+  }catch(e){openLeadWhatsApp('Contact Message',{name,email,phone,course,duration,message});showToast('Network issue, but WhatsApp message opened. ✅','success');}
+  btn.disabled=false;btn.textContent='SEND MESSAGE →';
+}
+
+function selectDuration(val){
+  const dur=document.getElementById('enroll-duration');
+  if(dur) dur.value=val;
+  const l3=document.getElementById('dur-3m-label');
+  const l6=document.getElementById('dur-6m-label');
+  if(!l3||!l6) return;
+  if(val==='3 Months'){
+    l3.style.border='2px solid var(--primary)';l3.style.background='rgba(37,99,235,0.08)';l3.style.color='var(--primary)';
+    l6.style.border='2px solid var(--border)';l6.style.background='transparent';l6.style.color='';
+  } else {
+    l6.style.border='2px solid var(--primary)';l6.style.background='rgba(37,99,235,0.08)';l6.style.color='var(--primary)';
+    l3.style.border='2px solid var(--border)';l3.style.background='transparent';l3.style.color='';
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Phoenix Academy company-logo UI/UX update
+
+Updated areas:
+- Placements page Top 10 Companies grid: 5 columns on desktop, uniform small logo slots.
+- Placements page Remaining Companies grid: 4 columns on desktop, uniform small logo slots.
+- Equal row and column spacing with centered straight-line alignment.
+- Responsive 3-column tablet and 2-column mobile layouts.
+- Home page scrolling company logos reduced and evenly spaced.
+- Transparent logo backgrounds preserved; no logo boxes, borders, shadows, or cut lines.
+- Existing navigation, forms, popups, chatbot, WhatsApp and other functionality unchanged.

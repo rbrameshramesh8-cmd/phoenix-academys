@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Phoenix Academy by Phoenix Ventures Group offers job-oriented IT training, Java Full Stack, Python Developer, Digital Marketing, UI/UX Web Developer, MERN Full Stack, real-time project training, internship training and placement support in Bangalore.">
+  <meta name="keywords" content="Phoenix Academy, Phoenix Ventures Group, IT training institute, software training institute, Java Full Stack course, Python Developer course, Digital Marketing course, UI/UX Web Developer course, MERN Full Stack course, placement training, real-time project training, internship training, job-oriented courses, Bangalore IT training">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Phoenix Academy | Premium IT Training Institute">
+  <meta property="og:description" content="Job-oriented IT courses with real-time projects, internships, demo classes and placement support.">
+  <meta property="og:image" content="/images/logo.png">
+  <title>Book Free Demo | Phoenix Academy</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+
+<!-- HERO -->
+<section class="page-hero green-page-hero grid-bg" style="min-height:320px;position:relative;overflow:hidden">
+  <div class="blob" style="width:500px;height:500px;background:var(--primary);top:-300px;right:-150px"></div>
+  <div class="wrap" style="padding:60px 24px;text-align:center;position:relative;z-index:1">
+    <div class="section-tag fade-in" style="background:rgba(10,102,194,0.1);border-color:rgba(10,102,194,0.3);color:#2563eb"><img src="/assets/icons/check-circle.png" alt="" class="inline-icon">100% FREE — NO CREDIT CARD NEEDED</div>
+    <h1 class="fade-in" style="font-size:2.8rem;font-weight:900;margin:16px 0;line-height:1.1" data-delay="1">
+      BOOK YOUR<br><span class="gradient-text">FREE DEMO CLASS</span>
+    </h1>
+    <p class="fade-in" style="color:#475569;font-size:0.72rem;max-width:560px;margin:0 auto;line-height:2" data-delay="2">
+      Experience Phoenix Academy first-hand. Choose a course and send a direct demo appointment request to the institute team. Ask anything, learn everything — completely free.
+    </p>
+  </div>
+</section>
+
+<!-- DEMO BOOKING -->
+<section style="padding:80px 0;background:var(--bg)">
+  <div class="wrap">
+    <div class="grid-contact" style="display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:start">
+
+      <!-- FORM -->
+      <div class="fade-in" data-delay="1">
+        <div style="background:#fff;border:1px solid rgba(37,99,235,0.25);border-radius:24px;padding:40px;box-shadow:0 0 60px rgba(37,99,235,0.1)">
+          <div style="font-size:0.62rem;color:var(--primary);letter-spacing:0.15em;margin-bottom:8px"><img src="/assets/icons/lightning.png" alt="" class="inline-icon">STEP 1 OF 1</div>
+          <h2 style="font-size:1.3rem;font-weight:900;margin-bottom:6px">RESERVE YOUR SEAT</h2>
+          <p style="color:#475569;font-size:0.62rem;line-height:2;margin-bottom:28px">Fill in your details and we'll confirm your demo slot within 2 hours.</p>
+
+          <div id="demo-form">
+            <div class="input-row">
+              <div class="form-group">
+                <label class="form-label">FULL NAME *</label>
+                <input type="text" id="d-name" class="form-input" placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label class="form-label">PHONE NUMBER *</label>
+                <input type="tel" id="d-phone" class="form-input" placeholder="9XXXXXXXXX">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">EMAIL ADDRESS *</label>
+              <input type="email" id="d-email" class="form-input" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">COURSE OF INTEREST *</label>
+              <select id="d-course" class="form-input">
+                <option value="">Select a course</option>
+                <option>Java Full Stack</option>
+                <option>Python Developer</option>
+                <option>Digital Marketing</option>
+                <option>UI/UX Web Developer</option>
+                <option>MERN Full Stack</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">COURSE DURATION *</label>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px">
+                <label id="d-dur-3m-label" onclick="dSelectDuration('3 Months')" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border:2px solid var(--border);border-radius:10px;cursor:pointer;font-size:0.68rem;font-weight:700;letter-spacing:0.05em;transition:all 0.2s">
+                  <img src="/assets/icons/timer.png" alt="" class="duration-icon"> 3 MONTHS
+                </label>
+                <label id="d-dur-6m-label" onclick="dSelectDuration('6 Months')" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border:2px solid var(--border);border-radius:10px;cursor:pointer;font-size:0.68rem;font-weight:700;letter-spacing:0.05em;transition:all 0.2s">
+                  <img src="/assets/icons/calendar-check.png" alt="" class="duration-icon"> 6 MONTHS
+                </label>
+              </div>
+              <input type="hidden" id="d-duration" value="">
+            </div>
+            <div class="input-row">
+              <div class="form-group">
+                <label class="form-label">PREFERRED DATE</label>
+                <input type="date" id="d-date" class="form-input">
+              </div>
+              <div class="form-group">
+                <label class="form-label">PREFERRED TIME</label>
+                <select id="d-time" class="form-input">
+                  <option value="">Select time</option>
+                  <option>9:00 AM – 10:00 AM</option>
+                  <option>11:00 AM – 12:00 PM</option>
+                  <option>2:00 PM – 3:00 PM</option>
+                  <option>4:00 PM – 5:00 PM</option>
+                  <option>6:00 PM – 7:00 PM</option>
+                  <option>7:00 PM – 8:00 PM</option>
+                </select>
+              </div>
+            </div>
+            <button onclick="submitDemo()" class="btn-primary pulse-glow" style="width:100%;justify-content:center;font-size:0.8rem;padding:16px" id="demo-btn">
+              <img src="/assets/icons/target.png" alt="" class="inline-icon">BOOK MY FREE DEMO →
+            </button>
+            <p style="text-align:center;font-size:0.58rem;color:#475569;margin-top:12px">We'll send a confirmation to your email &amp; WhatsApp within 2 hours.</p>
+          </div>
+
+          <div id="demo-success" style="display:none;text-align:center;padding:32px 0">
+            <div style="font-size:3.5rem;margin-bottom:16px"><img src="/assets/icons/book-open.png" alt="" class="icon-xl"> </div>
+            <h3 style="font-size:1rem;font-weight:900;color:#2563eb;margin-bottom:8px">DEMO BOOKED SUCCESSFULLY!</h3>
+            <p style="color:#475569;font-size:0.68rem;line-height:2;margin-bottom:20px" id="demo-confirm-msg"></p>
+            <div style="background:rgba(10,102,194,0.08);border:1px solid rgba(10,102,194,0.2);border-radius:12px;padding:16px;margin-bottom:20px">
+              <div style="font-size:0.6rem;color:#475569;margin-bottom:6px">WHAT HAPPENS NEXT?</div>
+              <div style="font-size:0.65rem;color:#0f172a;line-height:2"><img src="/assets/icons/check-circle.png" alt="" class="inline-icon">Confirmation SMS/WhatsApp sent<br><img src="/assets/icons/check-circle.png" alt="" class="inline-icon">Our counsellor will call you<br><img src="/assets/icons/check-circle.png" alt="" class="inline-icon">Zoom/Offline link shared before session</div>
+            </div>
+            <a href="https://wa.me/919986762311?text=Hi%20Phoenix%20Academy%2C%20I%20am%20interested%20in%20your%20courses." target="_blank" class="btn-outline" style="display:inline-flex"><img src="/assets/icons/whatsapp.png" alt="" class="inline-icon">CONTACT VIA WHATSAPP</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHAT TO EXPECT -->
+      <div class="fade-in" data-delay="2">
+        <div style="font-size:0.65rem;color:var(--primary);font-weight:700;letter-spacing:0.15em;margin-bottom:16px">WHAT HAPPENS IN THE DEMO?</div>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:36px">
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <div style="width:40px;height:40px;min-width:40px;background:linear-gradient(135deg,var(--primary),#2563eb);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:900;color:#000">01</div>
+            <div>
+              <div style="font-size:0.68rem;font-weight:800;margin-bottom:4px">COURSE WALKTHROUGH (15 MIN)</div>
+              <div style="font-size:0.62rem;color:#475569;line-height:1.8">Full curriculum overview — what you'll learn, tools you'll use, and projects you'll build.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <div style="width:40px;height:40px;min-width:40px;background:linear-gradient(135deg,var(--secondary),#0ea5e9);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:900;color:#000">02</div>
+            <div>
+              <div style="font-size:0.68rem;font-weight:800;margin-bottom:4px">LIVE DEMO CODING (20 MIN)</div>
+              <div style="font-size:0.62rem;color:#475569;line-height:1.8">See your expert mentor code live. Real problem-solving, real tools, no slides-only lectures.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <div style="width:40px;height:40px;min-width:40px;background:linear-gradient(135deg,var(--accent),#1d4ed8);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:900;color:#fff">03</div>
+            <div>
+              <div style="font-size:0.68rem;font-weight:800;margin-bottom:4px">PLACEMENT OVERVIEW (10 MIN)</div>
+              <div style="font-size:0.62rem;color:#475569;line-height:1.8">We show real placement data, alumni LinkedIn profiles, and explain our placement guarantee.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <div style="width:40px;height:40px;min-width:40px;background:linear-gradient(135deg,#2563eb,#2563eb);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:900;color:#fff">04</div>
+            <div>
+              <div style="font-size:0.68rem;font-weight:800;margin-bottom:4px">Q&amp;A SESSION (15 MIN)</div>
+              <div style="font-size:0.62rem;color:#475569;line-height:1.8">Ask anything! Fees, batches, career scope, prerequisites — our counsellor answers it all.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Upcoming sessions -->
+        <div class="upcoming-session-card demo-appointment-card"  style="background:rgba(37,99,235,0.04);border:1px solid rgba(0,0,0,0.07);border-radius:16px;padding:24px">
+          <div style="font-size:0.62rem;font-weight:700;color:var(--primary);letter-spacing:0.12em;margin-bottom:16px"><img src="/assets/icons/lightning.png" alt="" class="inline-icon">SELECT DEMO COURSE</div>
+          <div style="display:flex;flex-direction:column;gap:0">
+            <div class="session-book-row" style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)">
+              <div>
+                <div class="session-course-title"><img src="/assets/course_icons/java-full-stack-development.png" alt="" class="inline-icon">Java Full Stack</div>
+                <div class="session-course-slot">Demo Appointment Request</div>
+              </div>
+              <button type="button" class="session-book-btn" onclick="bookCourseSession('Java Full Stack','Demo Appointment Request')">BOOKING →</button>
+            </div>
+            <div class="session-book-row" style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)">
+              <div>
+                <div class="session-course-title"><img src="/assets/course_icons/python-development.png" alt="" class="inline-icon">Python Developer</div>
+                <div class="session-course-slot">Demo Appointment Request</div>
+              </div>
+              <button type="button" class="session-book-btn" onclick="bookCourseSession('Python Developer','Demo Appointment Request')">BOOKING →</button>
+            </div>
+            <div class="session-book-row" style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)">
+              <div>
+                <div class="session-course-title"><img src="/assets/course_icons/digital-marketing.png" alt="" class="inline-icon">Digital Marketing</div>
+                <div class="session-course-slot">Demo Appointment Request</div>
+              </div>
+              <button type="button" class="session-book-btn" onclick="bookCourseSession('Digital Marketing','Demo Appointment Request')">BOOKING →</button>
+            </div>
+            <div class="session-book-row" style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)">
+              <div>
+                <div class="session-course-title"><img src="/assets/course_icons/ui-ux-design.png" alt="" class="inline-icon">UI/UX Web Developer</div>
+                <div class="session-course-slot">Demo Appointment Request</div>
+              </div>
+              <button type="button" class="session-book-btn" onclick="bookCourseSession('UI/UX Web Developer','Demo Appointment Request')">BOOKING →</button>
+            </div>
+            <div class="session-book-row" style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)">
+              <div>
+                <div class="session-course-title"><img src="/assets/course_icons/mern-full-stack-development.png" alt="" class="inline-icon">MERN Full Stack</div>
+                <div class="session-course-slot">Demo Appointment Request</div>
+              </div>
+              <button type="button" class="session-book-btn" onclick="bookCourseSession('MERN Full Stack','Demo Appointment Request')">BOOKING →</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section style="padding:70px 0;background:var(--bg2)">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+      <div class="fade-in card" style="padding:24px;text-align:center" data-delay="1">
+        <div style="display:flex;justify-content:center;margin-bottom:12px"><img src="/assets/icons/ticket.png" alt="" class="icon-xl"></div>
+        <div style="font-size:0.68rem;font-weight:800;margin-bottom:6px;color:var(--primary)">100% FREE</div>
+        <div style="font-size:0.6rem;color:#475569;line-height:1.8">No hidden charges. No credit card. Completely free trial class.</div>
+      </div>
+      <div class="fade-in card" style="padding:24px;text-align:center" data-delay="2">
+        <div style="display:flex;justify-content:center;margin-bottom:12px"><img src="/assets/icons/teacher.png" alt="" class="icon-xl"></div>
+        <div style="font-size:0.68rem;font-weight:800;margin-bottom:6px;color:var(--secondary)">EXPERT MENTOR</div>
+        <div style="font-size:0.6rem;color:#475569;line-height:1.8">Live session with an industry professional — not a pre-recorded content.</div>
+      </div>
+      <div class="fade-in card" style="padding:24px;text-align:center" data-delay="3">
+        <div style="display:flex;justify-content:center;margin-bottom:12px"><img src="/assets/icons/laptop.png" alt="" class="icon-xl"></div>
+        <div style="font-size:0.68rem;font-weight:800;margin-bottom:6px;color:var(--accent)">ONLINE & OFFLINE</div>
+        <div style="font-size:0.6rem;color:#475569;line-height:1.8">Attend from home via Zoom or visit our Bangalore campus in person.</div>
+      </div>
+      <div class="fade-in card" style="padding:24px;text-align:center" data-delay="4">
+        <div style="display:flex;justify-content:center;margin-bottom:12px"><img src="/assets/icons/book-open.png" alt="" class="icon-xl"></div>
+        <div style="font-size:0.68rem;font-weight:800;margin-bottom:6px;color:#2563eb">FREE STUDY KIT</div>
+        <div style="font-size:0.6rem;color:#475569;line-height:1.8">Get free study materials, roadmap PDF, and course brochure after attending.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<div id="toast" class="toast"></div>
+<div id="enroll-modal" class="modal-overlay">
+  <div class="modal-box">
+    <button onclick="closeModal()" style="position:absolute;top:16px;right:16px;background:none;border:none;color:#475569;cursor:pointer;font-size:1.4rem">✕</button>
+    <div style="font-size:0.62rem;color:var(--primary);letter-spacing:0.15em;margin-bottom:8px"><img src="/assets/icons/lightning.png" alt="" class="inline-icon">ENROLL NOW</div>
+    <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:6px">Reserve Your Seat</h3>
+    <div id="modal-course-name" style="font-size:0.68rem;color:#475569;margin-bottom:24px"></div>
+    <div class="form-group"><label class="form-label">FULL NAME *</label><input type="text" id="enroll-name" class="form-input" placeholder="Your full name"></div>
+    <div class="input-row">
+      <div class="form-group"><label class="form-label">EMAIL *</label><input type="email" id="enroll-email" class="form-input" placeholder="your@email.com"></div>
+      <div class="form-group"><label class="form-label">PHONE *</label><input type="tel" id="enroll-phone" class="form-input" placeholder="9XXXXXXXXX"></div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">COURSE DURATION *</label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <label id="dur-3m-label" onclick="selectDuration('3 Months')" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border:2px solid var(--border);border-radius:10px;cursor:pointer;font-size:0.68rem;font-weight:700;letter-spacing:0.05em;transition:all 0.2s">
+          <img src="/assets/icons/timer.png" alt="" class="duration-icon"> 3 MONTHS · ₹14,999
+        </label>
+        <label id="dur-6m-label" onclick="selectDuration('6 Months')" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border:2px solid var(--border);border-radius:10px;cursor:pointer;font-size:0.68rem;font-weight:700;letter-spacing:0.05em;transition:all 0.2s">
+          <img src="/assets/icons/calendar-check.png" alt="" class="duration-icon"> 6 MONTHS · ₹29,999
+        </label>
+      </div>
+      <input type="hidden" id="enroll-duration" value="">
+    </div>
+    <button onclick="submitEnroll()" class="btn-primary" style="width:100%;justify-content:center;margin-top:8px" id="enroll-btn">CONFIRM ENROLLMENT →</button>
+  </div>
+</div>
+<a href="https://wa.me/919986762311?text=Hi%20Phoenix%20Academy%2C%20I%20am%20interested%20in%20your%20courses." target="_blank" class="whatsapp-fab">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+<a href="#" class="back-top" id="back-top">↑</a>
+<script src="/js/components.js"></script>
+<script src="/js/main.js"></script>
+<script>
+// Set min date to today
+document.getElementById('d-date').min=new Date().toISOString().split('T')[0];
+
+function dSelectDuration(val){
+  document.getElementById('d-duration').value=val;
+  const l3=document.getElementById('d-dur-3m-label');
+  const l6=document.getElementById('d-dur-6m-label');
+  if(val==='3 Months'){
+    l3.style.border='2px solid var(--primary)';l3.style.background='rgba(37,99,235,0.08)';l3.style.color='var(--primary)';
+    l6.style.border='2px solid var(--border)';l6.style.background='transparent';l6.style.color='';
+  } else {
+    l6.style.border='2px solid var(--primary)';l6.style.background='rgba(37,99,235,0.08)';l6.style.color='var(--primary)';
+    l3.style.border='2px solid var(--border)';l3.style.background='transparent';l3.style.color='';
+  }
+}
+
+async function submitDemo(){
+  const name=document.getElementById('d-name').value.trim();
+  const email=document.getElementById('d-email').value.trim();
+  const phone=document.getElementById('d-phone').value.trim();
+  const course=document.getElementById('d-course').value;
+  const duration=document.getElementById('d-duration').value;
+  const date=document.getElementById('d-date').value;
+  const time=document.getElementById('d-time').value;
+  if(!name||!email||!phone||!course){showToast('Please fill all required fields.','error');return;}
+  if(typeof isValidIndianMobile === 'function' && !isValidIndianMobile(phone)){showToast('Phone number must be exactly 10 digits.','error');return;}
+  if(!duration){showToast('Please select a course duration (3 or 6 Months).','error');return;}
+  const btn=document.getElementById('demo-btn');
+  btn.disabled=true;btn.textContent='BOOKING...';
+  try{
+    const res=await fetch('/api/demo',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email,phone,course,duration,date,time})});
+    const data=await res.json();
+    if(data.success){
+      document.getElementById('demo-form').style.display='none';
+      document.getElementById('demo-success').style.display='block';
+      const dateStr=date?new Date(date).toLocaleDateString('en-IN',{weekday:'long',year:'numeric',month:'long',day:'numeric'}):'';
+      document.getElementById('demo-confirm-msg').innerHTML=`
+        Your free demo for <strong style="color:var(--primary)">${course}</strong> (${duration}) has been booked!
+        ${dateStr?`<br>Preferred slot: <strong>${dateStr}${time?' · '+time:''}</strong>`:''}
+        <br><br>A confirmation will be sent to <strong>${email}</strong> within 2 hours.
+      `;
+      openLeadWhatsApp('Free Demo Booking',{name,email,phone,course,duration,date,time});
+      showToast('Demo sent to email + WhatsApp. ✅','success');
+    }else{showToast(data.message||'Something went wrong.','error');}
+  }catch(e){openLeadWhatsApp('Free Demo Booking',{name,email,phone,course,duration,date,time});showToast('Network issue, but WhatsApp message opened. ✅','success');}
+  btn.disabled=false;btn.innerHTML='<img src="/assets/icons/target.png" alt="" class="inline-icon">BOOK MY FREE DEMO →';
+}
+
+function selectDuration(val){
+  const dur=document.getElementById('enroll-duration');
+  if(dur) dur.value=val;
+  const l3=document.getElementById('dur-3m-label');
+  const l6=document.getElementById('dur-6m-label');
+  if(!l3||!l6) return;
+  if(val==='3 Months'){
+    l3.style.border='2px solid var(--primary)';l3.style.background='rgba(37,99,235,0.08)';l3.style.color='var(--primary)';
+    l6.style.border='2px solid var(--border)';l6.style.background='transparent';l6.style.color='';
+  } else {
+    l6.style.border='2px solid var(--primary)';l6.style.background='rgba(37,99,235,0.08)';l6.style.color='var(--primary)';
+    l3.style.border='2px solid var(--border)';l3.style.background='transparent';l3.style.color='';
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Updated company logo sections: added 10 new company logos first, kept the previous selected logos below, and updated the home auto-scrolling strip to show all 22 selected companies in the requested order.
+
+Final alignment cleanup:
+- Top 10 logos now use a strict 5-column desktop grid so both rows remain straight and equally spaced.
+- Remaining logos use equal grid positions with responsive 4/3/2/1-column layouts.
+- Visible company logo PNGs were cleaned to remove stray cut lines, white/background artifacts, and transparent padding inconsistencies.
+- Logo backgrounds, borders, shadows, and blend effects were removed for a clean transparent presentation.
+- Buy Course fee cards, labels, fields, phone/email contact boxes, and action text were aligned consistently without changing their functions.

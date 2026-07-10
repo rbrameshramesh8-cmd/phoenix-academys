@@ -1,0 +1,8 @@
+Phoenix Academy logo adjustment completed — 10 Jul 2026
+
+Changes made:
+- Increased only the Top 10 company logos on the Placements page by exactly 3%.
+- Increased the same first 10 company logos in both duplicated Home-page marquee sets by exactly 3%.
+- Increased equal spacing between every Home-page auto-scrolling company logo.
+- Kept all Remaining Companies logo sizes unchanged.
+- Kept existing pages, forms, navigation, popups, chatbot, WhatsApp, and scripts unchanged.

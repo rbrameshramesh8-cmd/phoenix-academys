@@ -1,0 +1,1 @@
+Updated to a single professional royal blue theme. No mixed UI colors and no orange UI colors were used. Logo images were not recolored. Existing layout/format, booking, WhatsApp, payment, and contact functions are preserved.

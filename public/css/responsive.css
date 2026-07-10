@@ -1,0 +1,1599 @@
+/* =====================================================
+   PHOENIX ACADEMY — RESPONSIVE STYLESHEET
+   Breakpoints:
+     xs  : 375px  (iPhone SE, small phones)
+     sm  : 480px  (large phones)
+     md  : 640px  (phablets)
+     lg  : 768px  (tablets / iPad)
+     xl  : 1024px (iPad Pro / laptop)
+     2xl : 1280px (desktop)
+   ===================================================== */
+
+/* ── Base fluid foundation ── */
+html { font-size: 16px; }
+*, *::before, *::after { box-sizing: border-box; }
+img, video, iframe { max-width: 100%; height: auto; }
+
+/* ── Fluid wrap padding ── */
+.wrap { padding-left: clamp(16px, 4vw, 24px); padding-right: clamp(16px, 4vw, 24px); }
+
+/* =====================================================
+   UTILITY RESPONSIVE GRID CLASSES
+   Add these classes to any grid container in HTML.
+   They override inline grid-template-columns with
+   !important so media queries can collapse them.
+   ===================================================== */
+
+/* Hero two-column layout */
+.grid-hero {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 60px !important;
+  align-items: center !important;
+}
+
+/* Contact / Demo asymmetric layout */
+.grid-contact {
+  display: grid !important;
+  grid-template-columns: 1.2fr 1fr !important;
+  gap: 60px !important;
+  align-items: start !important;
+}
+
+/* Standard two-column */
+.grid-2col {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+}
+
+/* Three-column */
+.grid-3col {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* Four-column */
+.grid-4col {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+/* Hero stats row (3 mini stats) */
+.grid-stats-3 {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+}
+
+/* =====================================================
+   ≤ 1280px — large desktop → regular desktop
+   Tighten gaps slightly
+   ===================================================== */
+@media (max-width: 1280px) {
+  .grid-hero   { gap: 48px !important; }
+  .grid-contact { gap: 48px !important; }
+  .grid-4col   { grid-template-columns: repeat(4, 1fr) !important; }
+  .grid-3col   { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+/* =====================================================
+   ≤ 1024px — iPad Pro / small laptop
+   ===================================================== */
+@media (max-width: 1024px) {
+  /* Hero collapses to single column, right panel hidden handled by JS */
+  .grid-hero   { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .grid-contact { grid-template-columns: 1fr !important; gap: 40px !important; }
+
+  /* 4-col → 2-col */
+  .grid-4col   { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
+
+  /* 3-col → 2-col */
+  .grid-3col   { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
+
+  /* hero h1 scale */
+  .hero-h1     { font-size: clamp(2rem, 4vw, 3rem) !important; }
+
+  /* section padding */
+  section[style*="padding:90px"] { padding-top: 64px !important; padding-bottom: 64px !important; }
+  section[style*="padding:80px"] { padding-top: 56px !important; padding-bottom: 56px !important; }
+  section[style*="padding:70px"] { padding-top: 50px !important; padding-bottom: 50px !important; }
+}
+
+/* =====================================================
+   ≤ 768px — tablets / iPad mini / large phones
+   ===================================================== */
+@media (max-width: 768px) {
+  /* ── Navbar already handled in style.css ── */
+
+  /* ── Hero ── */
+  .grid-hero  { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .hero-h1    { font-size: clamp(1.8rem, 6vw, 2.6rem) !important; line-height: 1.15 !important; }
+  .section-h2 { font-size: clamp(1.5rem, 5vw, 2rem) !important; }
+
+  /* Hero section min-height */
+  section.hero-bg { min-height: auto !important; padding-top: 100px !important; padding-bottom: 60px !important; }
+
+  /* ── Grids ── */
+  .grid-contact { grid-template-columns: 1fr !important; }
+  .grid-2col    { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .grid-3col    { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
+  .grid-4col    { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
+  .grid-stats-3 { grid-template-columns: repeat(3, 1fr) !important; gap: 12px !important; }
+
+  /* ── Sections ── */
+  section { padding-top: 48px !important; padding-bottom: 48px !important; }
+  .page-hero { min-height: auto !important; padding-top: 90px !important; padding-bottom: 40px !important; }
+
+  /* ── Why Phoenix ── */
+  .grid-why { grid-template-columns: 1fr !important; gap: 40px !important; }
+
+  /* ── Testimonial CTA grid ── */
+  .grid-cta-2col { grid-template-columns: 1fr !important; gap: 24px !important; }
+
+  /* ── Footer ── */
+  .footer-grid  { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
+
+  /* ── Misc ── */
+  .modal-box    { padding: 28px 20px !important; }
+  .input-row    { grid-template-columns: 1fr !important; }
+
+  /* ── Blob decor hidden on smaller screens ── */
+  .blob         { display: none !important; }
+
+  /* ── Section margin-bottom for headers ── */
+  div[style*="text-align:center;margin-bottom:60px"] { margin-bottom: 36px !important; }
+  div[style*="text-align:center;margin-bottom:50px"] { margin-bottom: 30px !important; }
+}
+
+/* =====================================================
+   ≤ 640px — large phones (Android / iPhone 6–14 Plus)
+   ===================================================== */
+@media (max-width: 640px) {
+  /* ── Hero stats ── */
+  .grid-stats-3 { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .hero-stats-border { border-right: none !important; border-bottom: 1px solid var(--border) !important; padding-bottom: 12px !important; margin-bottom: 4px !important; }
+
+  /* ── Grids ── */
+  .grid-3col  { grid-template-columns: 1fr !important; }
+  .grid-2col  { grid-template-columns: 1fr !important; }
+
+  /* ── Hero text & buttons ── */
+  .hero-h1    { font-size: clamp(1.65rem, 7vw, 2rem) !important; }
+  div[style*="display:flex;gap:14px"]  { flex-direction: column !important; align-items: flex-start !important; }
+
+  /* ── Course cards ── */
+  .course-card { padding: 20px !important; }
+
+  /* ── Stat cards numbers ── */
+  .stat-num   { font-size: 2rem !important; }
+
+  /* ── Page hero headings ── */
+  .page-hero h1 { font-size: clamp(1.6rem, 6vw, 2.2rem) !important; }
+
+  /* ── Process steps ── */
+  .process-step { padding-left: 56px !important; }
+
+  /* ── Timeline ── */
+  .timeline-item { padding-left: 32px !important; }
+
+  /* ── WhatsApp FAB + Back to top: stack safely ── */
+  .whatsapp-fab { width: 50px !important; height: 50px !important; bottom: 20px !important; right: 16px !important; }
+  .back-top     { bottom: 80px !important; right: 16px !important; width: 40px !important; height: 40px !important; }
+
+  /* ── Footer bottom bar ── */
+  div[style*="justify-content:space-between;align-items:center;flex-wrap:wrap"] {
+    flex-direction: column !important;
+    gap: 6px !important;
+    text-align: center !important;
+  }
+}
+
+/* =====================================================
+   ≤ 480px — small phones (iPhone SE, Galaxy A02)
+   ===================================================== */
+@media (max-width: 480px) {
+  /* Wrap has minimum breathing room */
+  .wrap { padding-left: 14px !important; padding-right: 14px !important; }
+
+  /* ── Nav ── */
+  .nav-inner  { height: 60px !important; padding: 0 14px !important; }
+
+  /* ── Hero ── */
+  .hero-h1    { font-size: 1.55rem !important; }
+  section.hero-bg { padding-top: 80px !important; padding-bottom: 48px !important; }
+
+  /* ── 4-col → single ── */
+  .grid-4col  { grid-template-columns: 1fr !important; gap: 14px !important; }
+
+  /* ── Stats 3 → 1 ── */
+  .grid-stats-3 { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+
+  /* ── Buttons full-width on very small ── */
+  .btn-primary, .btn-outline, .btn-cyan {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  /* But don't force nav CTA full-width */
+  .nav-cta { width: auto !important; }
+
+  /* ── Footer ── */
+  .footer-grid { grid-template-columns: 1fr !important; }
+  .footer-inner { padding: 40px 14px 24px !important; }
+
+  /* ── Modal ── */
+  .modal-box  { padding: 24px 16px !important; margin: 12px !important; border-radius: 18px !important; }
+
+  /* ── Marquee pills ── */
+  .company-pill { padding: 8px 14px !important; font-size: 0.65rem !important; }
+
+  /* ── Section tag size ── */
+  .section-tag { font-size: 0.6rem !important; padding: 5px 12px !important; }
+
+  /* ── Course card ── */
+  .course-card { padding: 18px 16px !important; border-radius: 16px !important; }
+
+  /* ── FAQ ── */
+  .faq-q { padding: 16px 18px !important; font-size: 0.68rem !important; }
+
+  /* ── Contact info card padding ── */
+  .card { padding: 20px 16px !important; }
+}
+
+/* =====================================================
+   ≤ 375px — iPhone SE / very narrow
+   ===================================================== */
+@media (max-width: 375px) {
+  .hero-h1    { font-size: 1.38rem !important; }
+  .wrap       { padding-left: 12px !important; padding-right: 12px !important; }
+  .btn-primary, .btn-outline, .btn-cyan { padding: 12px 18px !important; font-size: 0.72rem !important; }
+  .stat-num   { font-size: 1.75rem !important; }
+  .footer-grid { gap: 20px !important; }
+  .grid-stats-3 { grid-template-columns: 1fr !important; }
+}
+
+/* =====================================================
+   SPECIFIC PAGE OVERRIDES
+   These target inline-styled elements that can't be
+   overridden with generic class selectors.
+   ===================================================== */
+
+/* ── INDEX: Hero right dashboard card ── */
+@media (max-width: 1024px) {
+  /* The right floating card column */
+  .grid-hero > div:last-child { display: none !important; }
+
+  /* Hero stats row — keep as 3 cols on tablet */
+  .grid-stats-3 { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+@media (max-width: 640px) {
+  /* Show hero dashboard card removed, adjust hero padding */
+  section.hero-bg .wrap { padding-top: 32px !important; padding-bottom: 40px !important; }
+
+  /* Hero CTA buttons – already column from above rule */
+
+  /* Hero stats borders */
+  div[data-count] + div { font-size: 0.55rem !important; }
+}
+
+/* ── INDEX: Featured courses grid ── */
+#featured-courses {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+}
+@media (max-width: 1024px) {
+  #featured-courses { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 640px) {
+  #featured-courses { grid-template-columns: 1fr !important; gap: 16px !important; }
+}
+
+/* ── INDEX / COURSES: Course grid ── */
+#courses-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+}
+@media (max-width: 1024px) {
+  #courses-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 640px) {
+  #courses-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+}
+
+/* ── INDEX: Why Phoenix 2-col ── */
+@media (max-width: 768px) {
+  /* The Why Phoenix section grid */
+  div[style*="gap:80px;align-items:center"] {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+}
+
+/* ── INDEX: Stats row (4 cols) ── */
+@media (max-width: 1024px) {
+  div[style*="grid-template-columns:repeat(4,1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 480px) {
+  div[style*="grid-template-columns:repeat(4,1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+}
+
+/* ── INDEX: Testimonials 3-col ── */
+@media (max-width: 1024px) {
+  div[style*="grid-template-columns:repeat(3,1fr);gap:24px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 640px) {
+  div[style*="grid-template-columns:repeat(3,1fr);gap:24px"] {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+}
+
+/* ── ABOUT: 4-col team/stats ── */
+@media (max-width: 1024px) {
+  div[style*="grid-template-columns:repeat(4,1fr);gap:24px"],
+  div[style*="grid-template-columns:repeat(4,1fr);gap:20px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 480px) {
+  div[style*="grid-template-columns:repeat(4,1fr);gap:24px"],
+  div[style*="grid-template-columns:repeat(4,1fr);gap:20px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+}
+
+/* ── ABOUT: 2-col leadership cards ── */
+@media (max-width: 768px) {
+  div[style*="grid-template-columns:1fr 1fr;gap:24px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── CONTACT / DEMO: Asymmetric 2-col ── */
+@media (max-width: 1024px) {
+  div[style*="grid-template-columns:1.2fr 1fr;gap:60px"] {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
+
+/* ── CONTACT / DEMO: Time slots 2-col ── */
+@media (max-width: 480px) {
+  div[style*="grid-template-columns:1fr 1fr;gap:10px;margin-top:6px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── PLACEMENTS: 4-col stats ── */
+@media (max-width: 1024px) {
+  div[style*="grid-template-columns:repeat(4,1fr);gap:24px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ── PLACEMENTS: 3-col companies ── */
+@media (max-width: 1024px) {
+  div[style*="grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 640px) {
+  div[style*="grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── PLACEMENTS: Student cards 2-col ── */
+@media (max-width: 768px) {
+  div[style*="grid-template-columns:repeat(2,1fr);gap:24px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── TESTIMONIALS: CTA 2-col ── */
+@media (max-width: 768px) {
+  div[style*="grid-template-columns:1fr 1fr;gap:40px;align-items:center"] {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  div[style*="grid-template-columns:repeat(2,1fr);gap:20px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── DEMO: Stats bottom row ── */
+@media (max-width: 1024px) {
+  div[style*="grid-template-columns:repeat(4,1fr);gap:20px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 480px) {
+  div[style*="grid-template-columns:repeat(4,1fr);gap:20px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+}
+
+/* =====================================================
+   TYPOGRAPHY — fluid font scaling
+   ===================================================== */
+@media (max-width: 768px) {
+  h1 { font-size: clamp(1.6rem, 5vw, 2.4rem) !important; }
+  h2 { font-size: clamp(1.4rem, 4.5vw, 2rem) !important; }
+  h3 { font-size: clamp(1rem, 3.5vw, 1.3rem) !important; }
+
+  /* Page hero headings */
+  .page-hero h1[style*="font-size:2.8rem"] { font-size: clamp(1.8rem, 5.5vw, 2.4rem) !important; }
+  .page-hero h1[style*="font-size:2.4rem"] { font-size: clamp(1.6rem, 5vw, 2rem) !important; }
+  .page-hero h1[style*="font-size:2rem"]   { font-size: clamp(1.4rem, 4.5vw, 1.8rem) !important; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: clamp(1.4rem, 5.5vw, 1.8rem) !important; }
+  h2 { font-size: clamp(1.25rem, 4.5vw, 1.6rem) !important; }
+
+  /* Section sub-paragraph text */
+  p[style*="font-size:0.72rem"] { font-size: 0.7rem !important; line-height: 1.85 !important; }
+}
+
+/* =====================================================
+   SECTION PADDING — fluid
+   ===================================================== */
+@media (max-width: 768px) {
+  section[style*="padding:90px 0"] { padding: 52px 0 !important; }
+  section[style*="padding:80px 0"] { padding: 44px 0 !important; }
+  section[style*="padding:70px 0"] { padding: 40px 0 !important; }
+  section[style*="padding:60px 0"] { padding: 36px 0 !important; }
+}
+
+@media (max-width: 480px) {
+  section[style*="padding:90px 0"] { padding: 40px 0 !important; }
+  section[style*="padding:80px 0"] { padding: 36px 0 !important; }
+  section[style*="padding:70px 0"] { padding: 32px 0 !important; }
+  section[style*="padding:60px 0"] { padding: 28px 0 !important; }
+}
+
+/* =====================================================
+   NAVIGATION — extra refinements
+   ===================================================== */
+
+/* Ensure hamburger menu links are full-width tap targets */
+.mobile-menu a {
+  padding: 13px 0 !important;
+  min-height: 44px;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* iOS safe-area insets for notch */
+@supports (padding: env(safe-area-inset-top)) {
+  .navbar { padding-top: env(safe-area-inset-top); }
+  .whatsapp-fab { bottom: calc(28px + env(safe-area-inset-bottom)); }
+  .back-top     { bottom: calc(96px + env(safe-area-inset-bottom)); }
+}
+
+/* =====================================================
+   MODAL — full-screen on small phones
+   ===================================================== */
+@media (max-width: 480px) {
+  .modal-overlay { padding: 10px !important; align-items: flex-end !important; }
+  .modal-box {
+    border-radius: 20px 20px 0 0 !important;
+    max-height: 92vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* =====================================================
+   FORM — comfortable touch targets
+   ===================================================== */
+.form-input {
+  min-height: 48px;
+  font-size: 16px !important; /* prevents iOS zoom on focus */
+}
+
+select.form-input { font-size: 16px !important; }
+
+/* =====================================================
+   MISC COMPONENT FIXES
+   ===================================================== */
+
+/* Sticky course filter bar */
+@media (max-width: 640px) {
+  section[style*="position:sticky"] {
+    top: 60px !important;
+    padding: 12px 0 !important;
+  }
+  #filter-bar { gap: 6px !important; padding: 0 12px !important; }
+  #filter-bar button { font-size: 0.58rem !important; padding: 7px 12px !important; }
+}
+
+/* Marquee — slower on mobile */
+@media (max-width: 640px) {
+  .marquee-track { animation-duration: 28s !important; gap: 20px !important; }
+}
+
+/* Company pills in marquee */
+@media (max-width: 640px) {
+  .company-pill { padding: 8px 14px !important; font-size: 0.6rem !important; gap: 5px !important; }
+}
+
+/* Process steps — remove left num on xs */
+@media (max-width: 375px) {
+  .process-step { padding-left: 0 !important; }
+  .process-step::before { position: static !important; margin-bottom: 10px !important; display: inline-flex !important; }
+}
+
+/* Timeline — thinner on mobile */
+@media (max-width: 480px) {
+  .timeline-item { padding-left: 34px !important; padding-bottom: 28px !important; }
+  .timeline-dot  { width: 18px !important; height: 18px !important; left: 0 !important; }
+  .timeline-item::before { left: 8px !important; }
+}
+
+/* Section margin-bottom reductions */
+@media (max-width: 768px) {
+  [style*="margin-bottom:60px"] { margin-bottom: 36px !important; }
+  [style*="margin-bottom:50px"] { margin-bottom: 28px !important; }
+  [style*="margin-bottom:40px"] { margin-bottom: 24px !important; }
+  [style*="margin-bottom:32px"] { margin-bottom: 20px !important; }
+  [style*="margin-top:48px"]    { margin-top: 28px !important; }
+}
+
+/* Large gap between sections on about page */
+@media (max-width: 768px) {
+  div[style*="gap:80px"] { gap: 36px !important; }
+  div[style*="gap:60px"] { gap: 28px !important; }
+  div[style*="gap:40px"] { gap: 20px !important; }
+}
+
+/* =====================================================
+   PRINT — clean single-column
+   ===================================================== */
+@media print {
+  .navbar, .whatsapp-fab, .back-top, .hamburger, .mobile-menu { display: none !important; }
+  body { font-size: 12pt; }
+  .wrap { max-width: 100%; padding: 0; }
+  section { padding: 24pt 0 !important; }
+  .grid-hero, .grid-contact, .grid-2col, .grid-3col, .grid-4col,
+  #featured-courses, #courses-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* FINAL OVERRIDE LOADED LAST — keep requested 85% layout/course cards/popup clean */
+.wrap{width:85%!important;max-width:1440px!important;margin-left:auto!important;margin-right:auto!important;padding-left:0!important;padding-right:0!important;box-sizing:border-box!important;}
+.nav-inner,.footer-inner{width:85%!important;max-width:1440px!important;padding-left:0!important;padding-right:0!important;}
+#featured-courses,#courses-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:26px!important;align-items:stretch!important;justify-items:stretch!important;}
+.course-sim-card.course-art-card{width:100%!important;max-width:none!important;aspect-ratio:auto!important;display:flex!important;flex-direction:column!important;line-height:1.45!important;background:#fff!important;border:1.5px solid #dfe6f5!important;border-radius:14px!important;box-shadow:0 10px 28px rgba(15,23,42,.08)!important;overflow:hidden!important;padding:0!important;margin:0!important;}
+.course-sim-header{height:clamp(132px,10vw,170px)!important;min-height:132px!important;}
+.course-sim-header img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important;}
+@media(max-width:1180px){.wrap,.nav-inner,.footer-inner{width:90%!important;}#featured-courses,#courses-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:24px!important;}.course-sim-header{height:160px!important;}}
+@media(max-width:720px){.wrap,.nav-inner,.footer-inner{width:94%!important;}#featured-courses,#courses-grid{grid-template-columns:1fr!important;gap:22px!important;}.course-sim-card.course-art-card{max-width:520px!important;margin:0 auto!important;}.course-sim-header{height:155px!important;}}
+@media(max-width:380px){.course-sim-highlight-grid,.course-sim-actions{grid-template-columns:1fr!important;}.course-sim-header{height:138px!important;}}
+.modal-overlay.enroll-modal-overlay{align-items:center!important;justify-content:center!important;padding:clamp(14px,3vw,28px)!important;}
+.enroll-link-modal-box{width:min(85vw,540px)!important;max-height:85vh!important;border-radius:24px!important;overflow:auto!important;}
+.payment-modal-box{width:min(85vw,700px)!important;max-height:85vh!important;}
+@media(max-width:640px){.modal-overlay.enroll-modal-overlay{align-items:center!important;padding:12px!important;}.enroll-link-modal-box{width:92vw!important;max-height:82vh!important;border-radius:22px!important;}.payment-modal-box{width:92vw!important;max-height:84vh!important;border-radius:22px!important;}}
+.placement-package-label{font-size:.82rem!important;color:#07114a!important;font-weight:900!important;letter-spacing:.09em!important;text-transform:uppercase!important;margin-top:8px!important;line-height:1.25!important;}
+
+
+/* =====================================================
+   FINAL UPDATE — equal popup sizing + fixed course filters
+   ===================================================== */
+
+/*
+  The previous Buy Course popup was 836px wide with a 92vh height cap.
+  This update reduces both dimensions by 15%:
+  836px × 0.85 = 710.6px (rounded to 711px)
+  92vh × 0.85 = 78.2vh
+  The six-second enrollment notification uses the exact same frame size.
+*/
+.phoenix-mobile-shell.booking-mode,
+.phoenix-mobile-shell.buy-mode {
+  width: min(92vw, 711px) !important;
+  max-width: 711px !important;
+  margin: auto !important;
+}
+
+.phoenix-mobile-shell.booking-mode .phoenix-popup-card,
+.phoenix-mobile-shell.buy-mode .phoenix-popup-card {
+  width: 100% !important;
+  height: min(78.2vh, 720px) !important;
+  min-height: 0 !important;
+  max-height: min(78.2vh, 720px) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* Compact only the Buy Course form internals by approximately 15%. */
+.phoenix-mobile-shell.buy-mode .phoenix-buy-header {
+  padding: 29px 32px 22px !important;
+}
+.phoenix-mobile-shell.buy-mode .phoenix-buy-body {
+  padding: 22px 32px 29px !important;
+  gap: 14px !important;
+}
+.phoenix-mobile-shell.buy-mode .phoenix-buy-tags {
+  margin-top: 14px !important;
+  gap: 7px !important;
+}
+.phoenix-mobile-shell.buy-mode .phoenix-course-summary {
+  padding: 14px 15px !important;
+}
+.phoenix-mobile-shell.buy-mode .phoenix-option-card {
+  min-height: 73px !important;
+  padding: 12px !important;
+}
+.phoenix-mobile-shell.buy-mode .phoenix-phone-form-row select,
+.phoenix-mobile-shell.buy-mode .phoenix-phone-form-grid input {
+  height: 44px !important;
+}
+.phoenix-mobile-shell.buy-mode .phoenix-phone-form-grid textarea {
+  min-height: 70px !important;
+}
+.phoenix-mobile-shell.buy-mode .phoenix-main-action {
+  min-height: 48px !important;
+}
+.phoenix-mobile-shell.buy-mode .phoenix-buy-contact a {
+  height: 44px !important;
+}
+.phoenix-mobile-shell.buy-mode .phoenix-two-actions button {
+  min-height: 43px !important;
+}
+
+/* Keep the Courses category layer locked beneath the fixed navbar. */
+.courses-filter-layer {
+  position: sticky !important;
+  top: 92px !important;
+  z-index: 980 !important;
+  padding: 20px 0 !important;
+  transform: none !important;
+  transition: none !important;
+  background: rgba(255,255,255,.98) !important;
+  border-bottom: 1px solid rgba(15,23,42,.10) !important;
+  box-shadow: 0 8px 24px rgba(15,23,42,.07) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+.courses-filter-layer #filter-bar,
+.courses-filter-layer .filter-btn,
+.courses-filter-layer .filter-btn:hover,
+.courses-filter-layer .filter-btn:focus,
+.courses-filter-layer .filter-btn:active {
+  transform: none !important;
+}
+
+/* Courses page hero: 5% more height, spacing and typography. */
+.courses-page-hero {
+  min-height: 357px !important; /* 340px + 5% */
+  padding-top: 86.1px !important; /* 82px + 5% */
+}
+.courses-page-hero .courses-page-hero-inner {
+  padding-top: 42px !important;
+  padding-bottom: 42px !important;
+}
+.courses-page-hero .section-tag {
+  font-size: .861rem !important;
+  padding: 8.4px 14.7px !important;
+}
+.courses-page-hero .courses-page-title {
+  font-size: 2.94rem !important;
+  margin-top: 16.8px !important;
+  margin-bottom: 16.8px !important;
+}
+.courses-page-hero .courses-page-copy {
+  font-size: .756rem !important;
+  max-width: 588px !important;
+}
+
+@media (max-width: 768px) {
+  .phoenix-mobile-shell.booking-mode,
+  .phoenix-mobile-shell.buy-mode {
+    width: min(94vw, 711px) !important;
+    max-width: min(94vw, 711px) !important;
+  }
+  .phoenix-mobile-shell.booking-mode .phoenix-popup-card,
+  .phoenix-mobile-shell.buy-mode .phoenix-popup-card {
+    height: min(88vh, 720px) !important;
+    max-height: min(88vh, 720px) !important;
+  }
+  .courses-filter-layer {
+    top: 74px !important;
+    padding: 13px 0 !important;
+  }
+  .courses-page-hero {
+    min-height: 315px !important;
+    padding-top: 77.7px !important;
+  }
+  .courses-page-hero .courses-page-hero-inner {
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
+  }
+  .courses-page-hero .courses-page-title {
+    font-size: clamp(1.89rem, 5.78vw, 2.52rem) !important;
+  }
+  .courses-page-hero .courses-page-copy {
+    font-size: .735rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .phoenix-mobile-modal-overlay {
+    align-items: center !important;
+    padding: 8px !important;
+  }
+  .phoenix-mobile-shell.booking-mode,
+  .phoenix-mobile-shell.buy-mode {
+    width: 95vw !important;
+    max-width: 95vw !important;
+  }
+  .phoenix-mobile-shell.booking-mode .phoenix-popup-card,
+  .phoenix-mobile-shell.buy-mode .phoenix-popup-card {
+    height: 90vh !important;
+    max-height: 90vh !important;
+    border-radius: 20px !important;
+  }
+  .courses-filter-layer {
+    top: 68px !important;
+    padding: 11px 0 !important;
+  }
+  .courses-page-hero {
+    min-height: 294px !important;
+    padding-top: 71.4px !important;
+  }
+  .courses-page-hero .courses-page-hero-inner {
+    padding-top: 31.5px !important;
+    padding-bottom: 31.5px !important;
+  }
+}
+
+/* =====================================================
+   REFERENCE FORM STYLE — Buy Course + 6-second popup only
+   Matches the supplied compact blue-header form reference.
+   No other website section or function is changed.
+   ===================================================== */
+#phoenix-mobile-modal.phoenix-mobile-modal-overlay {
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 14px !important;
+  background: rgba(0, 0, 0, .72) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+#phoenix-mobile-modal .phoenix-mobile-shell.booking-mode,
+#phoenix-mobile-modal .phoenix-mobile-shell.buy-mode {
+  width: min(94vw, 438px) !important;
+  max-width: 438px !important;
+  margin: auto !important;
+}
+
+#phoenix-mobile-modal .phoenix-popup-card,
+#phoenix-mobile-modal .phoenix-mobile-shell.booking-mode .phoenix-popup-card,
+#phoenix-mobile-modal .phoenix-mobile-shell.buy-mode .phoenix-popup-card {
+  width: 100% !important;
+  height: min(86vh, 650px) !important;
+  min-height: 0 !important;
+  max-height: min(86vh, 650px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  border: 1px solid #d8dee8 !important;
+  border-radius: 14px !important;
+  background: #ffffff !important;
+  box-shadow: 0 18px 54px rgba(0, 0, 0, .34) !important;
+}
+
+#phoenix-mobile-modal .phoenix-reference-header,
+#phoenix-mobile-modal .phoenix-enroll-card-header.phoenix-reference-header,
+#phoenix-mobile-modal .phoenix-buy-header.phoenix-reference-header {
+  flex: 0 0 56px !important;
+  min-height: 56px !important;
+  height: 56px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 20px !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 13px 13px 0 0 !important;
+  background: #2f4eae !important;
+  box-shadow: none !important;
+}
+
+#phoenix-mobile-modal .phoenix-reference-header h3,
+#phoenix-mobile-modal .phoenix-enroll-card-header.phoenix-reference-header h3,
+#phoenix-mobile-modal .phoenix-buy-header.phoenix-reference-header h3 {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.22rem !important;
+  line-height: 1 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+}
+
+#phoenix-mobile-modal .phoenix-mobile-close {
+  top: 14px !important;
+  right: 15px !important;
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  padding: 0 !important;
+  border: 1.5px solid rgba(255, 255, 255, .95) !important;
+  border-radius: 3px !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  z-index: 30 !important;
+}
+#phoenix-mobile-modal .phoenix-mobile-close:hover {
+  background: rgba(255, 255, 255, .12) !important;
+  color: #ffffff !important;
+}
+
+#phoenix-mobile-modal .phoenix-enroll-form-body,
+#phoenix-mobile-modal .phoenix-buy-body {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: 24px 26px 12px !important;
+  gap: 12px !important;
+  background: #ffffff !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: #c5ccd8 #f3f5f8 !important;
+}
+#phoenix-mobile-modal .phoenix-enroll-form-body::-webkit-scrollbar,
+#phoenix-mobile-modal .phoenix-buy-body::-webkit-scrollbar { width: 6px !important; }
+#phoenix-mobile-modal .phoenix-enroll-form-body::-webkit-scrollbar-track,
+#phoenix-mobile-modal .phoenix-buy-body::-webkit-scrollbar-track { background: #f3f5f8 !important; }
+#phoenix-mobile-modal .phoenix-enroll-form-body::-webkit-scrollbar-thumb,
+#phoenix-mobile-modal .phoenix-buy-body::-webkit-scrollbar-thumb { background: #c5ccd8 !important; border-radius: 99px !important; }
+
+#phoenix-mobile-modal .phoenix-reference-intro {
+  display: block !important;
+  margin: 0 0 2px !important;
+  padding: 0 !important;
+}
+#phoenix-mobile-modal .phoenix-reference-intro .phoenix-popup-eyebrow {
+  margin: 0 0 5px !important;
+  color: #2f4eae !important;
+  font-size: .65rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .12em !important;
+}
+#phoenix-mobile-modal .phoenix-reference-intro .phoenix-popup-eyebrow img {
+  width: 14px !important;
+  height: 14px !important;
+}
+#phoenix-mobile-modal .phoenix-reference-intro h4 {
+  margin: 0 0 4px !important;
+  color: #1f2937 !important;
+  font-size: 1rem !important;
+  line-height: 1.3 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+}
+#phoenix-mobile-modal .phoenix-reference-intro p,
+#phoenix-mobile-modal .phoenix-reference-intro .phoenix-popup-course {
+  margin: 0 !important;
+  color: #687386 !important;
+  font-size: .72rem !important;
+  line-height: 1.55 !important;
+}
+
+#phoenix-mobile-modal .phoenix-popup-grid,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-grid {
+  grid-template-columns: 1fr !important;
+  gap: 11px !important;
+}
+
+#phoenix-mobile-modal .phoenix-field {
+  gap: 6px !important;
+}
+#phoenix-mobile-modal .phoenix-field label,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-row label {
+  color: #444444 !important;
+  font-size: .73rem !important;
+  line-height: 1.25 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+#phoenix-mobile-modal .phoenix-field input,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-row select,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-grid input,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-grid textarea {
+  width: 100% !important;
+  border: 1px solid #d9dde5 !important;
+  border-radius: 2px !important;
+  background: #ffffff !important;
+  color: #333333 !important;
+  box-shadow: none !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: .75rem !important;
+  font-weight: 400 !important;
+}
+#phoenix-mobile-modal .phoenix-field input,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-row select,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-grid input {
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 0 11px !important;
+}
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-grid textarea {
+  min-height: 62px !important;
+  padding: 9px 11px !important;
+  resize: vertical !important;
+}
+#phoenix-mobile-modal .phoenix-field input:focus,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-row select:focus,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-grid input:focus,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-grid textarea:focus {
+  border-color: #2f4eae !important;
+  box-shadow: 0 0 0 2px rgba(47, 78, 174, .10) !important;
+}
+
+#phoenix-mobile-modal .phoenix-enroll-duration-grid,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-options {
+  grid-template-columns: 1fr !important;
+  gap: 8px !important;
+}
+#phoenix-mobile-modal .phoenix-enroll-duration,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-option-card {
+  min-height: 42px !important;
+  padding: 8px 11px !important;
+  border: 1px solid #d9dde5 !important;
+  border-radius: 2px !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+#phoenix-mobile-modal .phoenix-enroll-duration.selected,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-option-card.active {
+  border-color: #2f4eae !important;
+  background: #f6f8ff !important;
+  box-shadow: 0 0 0 2px rgba(47, 78, 174, .08) !important;
+}
+
+#phoenix-mobile-modal .phoenix-enroll-confirm,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-main-action {
+  min-height: 36px !important;
+  height: 36px !important;
+  border: 0 !important;
+  border-radius: 2px !important;
+  background: #ff6a0a !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  font-size: .72rem !important;
+  font-weight: 600 !important;
+}
+#phoenix-mobile-modal .phoenix-enroll-confirm:hover,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-main-action:hover {
+  background: #f25f00 !important;
+  transform: none !important;
+}
+
+#phoenix-mobile-modal .phoenix-enroll-helper {
+  margin: 0 !important;
+  font-size: .66rem !important;
+}
+#phoenix-mobile-modal .phoenix-enroll-quick-actions {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 7px !important;
+}
+#phoenix-mobile-modal .phoenix-enroll-quick-actions a,
+#phoenix-mobile-modal .phoenix-enroll-quick-actions button,
+#phoenix-mobile-modal .phoenix-buy-contact a,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-two-actions button {
+  min-height: 36px !important;
+  height: 36px !important;
+  border-radius: 3px !important;
+  font-size: .63rem !important;
+  box-shadow: none !important;
+}
+
+#phoenix-mobile-modal .phoenix-buy-intro .phoenix-buy-tags {
+  margin-top: 8px !important;
+  gap: 5px !important;
+}
+#phoenix-mobile-modal .phoenix-buy-intro .phoenix-buy-tags em {
+  padding: 4px 7px !important;
+  border-radius: 3px !important;
+  font-size: .55rem !important;
+}
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-course-summary {
+  padding: 10px 11px !important;
+  border: 1px solid #e0e4eb !important;
+  border-radius: 3px !important;
+  background: #fafbfc !important;
+}
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-course-points {
+  grid-template-columns: 1fr 1fr !important;
+  gap: 5px !important;
+  margin-top: 7px !important;
+}
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-course-points span {
+  font-size: .58rem !important;
+}
+#phoenix-mobile-modal .phoenix-buy-contact,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-two-actions {
+  grid-template-columns: 1fr 1fr !important;
+  gap: 7px !important;
+}
+
+@media (max-width: 520px) {
+  #phoenix-mobile-modal.phoenix-mobile-modal-overlay { padding: 8px !important; }
+  #phoenix-mobile-modal .phoenix-mobile-shell.booking-mode,
+  #phoenix-mobile-modal .phoenix-mobile-shell.buy-mode {
+    width: 95vw !important;
+    max-width: 95vw !important;
+  }
+  #phoenix-mobile-modal .phoenix-popup-card,
+  #phoenix-mobile-modal .phoenix-mobile-shell.booking-mode .phoenix-popup-card,
+  #phoenix-mobile-modal .phoenix-mobile-shell.buy-mode .phoenix-popup-card {
+    height: 90vh !important;
+    max-height: 90vh !important;
+    border-radius: 12px !important;
+  }
+  #phoenix-mobile-modal .phoenix-reference-header,
+  #phoenix-mobile-modal .phoenix-enroll-card-header.phoenix-reference-header,
+  #phoenix-mobile-modal .phoenix-buy-header.phoenix-reference-header {
+    border-radius: 11px 11px 0 0 !important;
+  }
+  #phoenix-mobile-modal .phoenix-enroll-form-body,
+  #phoenix-mobile-modal .phoenix-buy-body {
+    padding: 20px 18px 10px !important;
+  }
+}
+
+
+/* =====================================================
+   FINAL POPUP SCALE PATCH — Buy Course + 6-second form +5%.
+   Existing fields, styles, validation and actions stay unchanged.
+   ===================================================== */
+#phoenix-mobile-modal .phoenix-mobile-shell.booking-mode,
+#phoenix-mobile-modal .phoenix-mobile-shell.buy-mode{
+  width:min(94vw,460px)!important;
+  max-width:460px!important;
+}
+#phoenix-mobile-modal .phoenix-popup-card,
+#phoenix-mobile-modal .phoenix-mobile-shell.booking-mode .phoenix-popup-card,
+#phoenix-mobile-modal .phoenix-mobile-shell.buy-mode .phoenix-popup-card{
+  height:min(90vh,683px)!important;
+  max-height:min(90vh,683px)!important;
+}
+@media(max-width:520px){
+  #phoenix-mobile-modal .phoenix-mobile-shell.booking-mode,
+  #phoenix-mobile-modal .phoenix-mobile-shell.buy-mode{
+    width:95vw!important;
+    max-width:460px!important;
+  }
+  #phoenix-mobile-modal .phoenix-popup-card,
+  #phoenix-mobile-modal .phoenix-mobile-shell.booking-mode .phoenix-popup-card,
+  #phoenix-mobile-modal .phoenix-mobile-shell.buy-mode .phoenix-popup-card{
+    height:92vh!important;
+    max-height:92vh!important;
+  }
+}
+
+/* =====================================================
+   FINAL ALIGNMENT PATCH — Buy Course text + clean company logos
+   Keeps all existing actions, validation and content unchanged.
+   ===================================================== */
+
+/* Buy Course: align every line consistently inside the selectable fee boxes. */
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-options{
+  width:100%!important;
+  align-items:stretch!important;
+}
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-option-card{
+  width:100%!important;
+  min-height:84px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:center!important;
+  gap:4px!important;
+  padding:11px 12px!important;
+  text-align:left!important;
+  line-height:1.2!important;
+  overflow:hidden!important;
+}
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-option-card span,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-option-card b,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-option-card small{
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  text-align:left!important;
+  line-height:1.25!important;
+  white-space:normal!important;
+}
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-option-card span{
+  font-size:.69rem!important;
+  font-weight:800!important;
+}
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-option-card b{
+  font-size:1.02rem!important;
+  font-weight:900!important;
+}
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-option-card small{
+  font-size:.64rem!important;
+  font-weight:650!important;
+}
+
+/* Inputs, labels and lower action boxes share one clean left/center alignment. */
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-row,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-grid{
+  width:100%!important;
+}
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-row label{
+  display:block!important;
+  width:100%!important;
+  margin:0!important;
+  text-align:left!important;
+}
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-row select,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-grid input,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-phone-form-grid textarea{
+  text-align:left!important;
+  line-height:1.4!important;
+}
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-main-action,
+#phoenix-mobile-modal .phoenix-buy-contact a,
+#phoenix-mobile-modal .phoenix-buy-body .phoenix-two-actions button{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:8px!important;
+  text-align:center!important;
+}
+#phoenix-mobile-modal .phoenix-buy-contact{
+  grid-template-columns:minmax(0,.92fr) minmax(0,1.18fr)!important;
+  align-items:stretch!important;
+}
+#phoenix-mobile-modal .phoenix-buy-contact a{
+  min-width:0!important;
+  padding:0 8px!important;
+  overflow:hidden!important;
+  white-space:nowrap!important;
+  font-size:.61rem!important;
+  line-height:1.2!important;
+  letter-spacing:-.01em!important;
+}
+#phoenix-mobile-modal .phoenix-buy-contact a img{
+  flex:0 0 auto!important;
+}
+
+/* Company section: exact rows/columns, equal logo slots, no background cards or cut lines. */
+.company-badge-grid.placement-company-grid,
+.placement-company-grid{
+  width:100%!important;
+  max-width:1260px!important;
+  display:grid!important;
+  align-items:center!important;
+  justify-items:center!important;
+  grid-auto-rows:104px!important;
+  column-gap:38px!important;
+  row-gap:28px!important;
+}
+.placement-company-grid-start{
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+}
+.placement-company-grid-remaining{
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+}
+.company-badge-grid.placement-company-grid .company-badge-img,
+.placement-company-grid .company-badge-img,
+.trusted-company-band .company-logo-strip .company-badge-img,
+.company-logo-strip .company-badge-img{
+  display:block!important;
+  width:190px!important;
+  max-width:100%!important;
+  height:82px!important;
+  min-height:82px!important;
+  margin:0 auto!important;
+  padding:0!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  outline:0!important;
+  filter:none!important;
+  mix-blend-mode:normal!important;
+  opacity:1!important;
+}
+.placement-company-grid .company-badge-img:hover{
+  transform:translateY(-2px) scale(1.025)!important;
+  filter:none!important;
+}
+
+/* Keep five perfectly aligned Top-10 columns on normal laptop/desktop widths. */
+@media (min-width:900px){
+  .placement-company-grid-start{
+    grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  }
+  .placement-company-grid-remaining{
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  }
+}
+@media (min-width:641px) and (max-width:899px){
+  .placement-company-grid-start,
+  .placement-company-grid-remaining{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  }
+}
+@media (max-width:640px){
+  .placement-company-grid-start,
+  .placement-company-grid-remaining{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    grid-auto-rows:92px!important;
+    column-gap:18px!important;
+    row-gap:20px!important;
+  }
+  .company-badge-grid.placement-company-grid .company-badge-img,
+  .placement-company-grid .company-badge-img{
+    width:150px!important;
+    height:70px!important;
+    min-height:70px!important;
+  }
+  #phoenix-mobile-modal .phoenix-buy-contact{
+    grid-template-columns:1fr!important;
+  }
+  #phoenix-mobile-modal .phoenix-buy-contact a{
+    font-size:.65rem!important;
+  }
+}
+@media (max-width:380px){
+  .placement-company-grid-start,
+  .placement-company-grid-remaining{
+    grid-template-columns:1fr!important;
+  }
+}
+
+
+/* =============================================================
+   FINAL COMPANY LOGO UI/UX OVERRIDE — 10 Jul 2026
+   The responsive stylesheet loads after style.css, so this final
+   layer guarantees small, uniform, straight-line company logos on
+   the Home marquee and Placements recruiter grids.
+   ============================================================= */
+
+/* Placements company section: clean white canvas and balanced spacing. */
+body.placements-page .placement-companies-section{
+  padding:68px 0 76px!important;
+  background:#ffffff!important;
+}
+body.placements-page .placement-companies-section > .wrap{
+  width:min(100%,1240px)!important;
+  padding-left:32px!important;
+  padding-right:32px!important;
+}
+body.placements-page .placement-companies-section .company-group-title{
+  margin:8px auto 28px!important;
+  font-size:clamp(1.75rem,2.35vw,2.2rem)!important;
+  line-height:1.18!important;
+  letter-spacing:-.035em!important;
+  color:#07152d!important;
+}
+body.placements-page .placement-companies-section .company-group-title::after{
+  width:72px!important;
+  height:3px!important;
+  margin-top:12px!important;
+}
+body.placements-page .placement-companies-section .company-group-title-secondary{
+  margin-top:60px!important;
+}
+
+/* Exact desktop grids: Top 10 = 5 × 2, Remaining = 4 × 3. */
+body.placements-page .company-badge-grid.placement-company-grid,
+body.placements-page .placement-company-grid{
+  width:100%!important;
+  display:grid!important;
+  align-items:center!important;
+  justify-items:center!important;
+  grid-auto-rows:64px!important;
+  row-gap:34px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+body.placements-page .placement-company-grid-start{
+  max-width:1010px!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  column-gap:54px!important;
+}
+body.placements-page .placement-company-grid-remaining{
+  max-width:900px!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  column-gap:66px!important;
+  row-gap:32px!important;
+}
+
+/* Every logo uses the same small visual slot without stretching. */
+body.placements-page .company-badge-grid.placement-company-grid .company-badge-img,
+body.placements-page .placement-company-grid .company-badge-img{
+  display:block!important;
+  width:132px!important;
+  min-width:0!important;
+  max-width:132px!important;
+  height:48px!important;
+  min-height:48px!important;
+  max-height:48px!important;
+  margin:0 auto!important;
+  padding:0!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  outline:0!important;
+  filter:none!important;
+  mix-blend-mode:normal!important;
+  opacity:1!important;
+  image-rendering:auto!important;
+  transform-origin:center!important;
+}
+body.placements-page .placement-company-grid .company-badge-img:hover{
+  transform:translateY(-2px) scale(1.025)!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+body.placements-page .placement-company-note{
+  margin:30px auto 0!important;
+  font-size:.62rem!important;
+  line-height:1.7!important;
+  color:#64748b!important;
+}
+
+/* Home page company marquee: smaller, evenly spaced logo rhythm. */
+.trusted-company-band .company-logo-set,
+.company-logo-set{
+  gap:36px!important;
+  padding-right:36px!important;
+  align-items:center!important;
+}
+.trusted-company-band .company-logo-strip .company-badge-img,
+.company-logo-strip .company-badge-img{
+  display:block!important;
+  width:118px!important;
+  min-width:118px!important;
+  max-width:118px!important;
+  height:44px!important;
+  min-height:44px!important;
+  max-height:44px!important;
+  flex:0 0 118px!important;
+  margin:0!important;
+  padding:0!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  outline:0!important;
+  filter:none!important;
+  mix-blend-mode:normal!important;
+  opacity:1!important;
+  image-rendering:auto!important;
+}
+
+@media (min-width:641px) and (max-width:1023px){
+  body.placements-page .placement-companies-section > .wrap{
+    padding-left:26px!important;
+    padding-right:26px!important;
+  }
+  body.placements-page .placement-company-grid-start,
+  body.placements-page .placement-company-grid-remaining{
+    max-width:690px!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    grid-auto-rows:62px!important;
+    column-gap:46px!important;
+    row-gap:32px!important;
+  }
+  body.placements-page .company-badge-grid.placement-company-grid .company-badge-img,
+  body.placements-page .placement-company-grid .company-badge-img{
+    width:122px!important;
+    max-width:122px!important;
+    height:46px!important;
+    min-height:46px!important;
+    max-height:46px!important;
+  }
+  .trusted-company-band .company-logo-set,
+  .company-logo-set{
+    gap:32px!important;
+    padding-right:32px!important;
+  }
+  .trusted-company-band .company-logo-strip .company-badge-img,
+  .company-logo-strip .company-badge-img{
+    width:110px!important;
+    min-width:110px!important;
+    max-width:110px!important;
+    height:42px!important;
+    min-height:42px!important;
+    max-height:42px!important;
+    flex-basis:110px!important;
+  }
+}
+
+@media (max-width:640px){
+  body.placements-page .placement-companies-section{
+    padding:52px 0 60px!important;
+  }
+  body.placements-page .placement-companies-section > .wrap{
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+  body.placements-page .placement-companies-section .company-group-title{
+    margin-bottom:24px!important;
+    font-size:1.55rem!important;
+  }
+  body.placements-page .placement-companies-section .company-group-title-secondary{
+    margin-top:48px!important;
+  }
+  body.placements-page .placement-company-grid-start,
+  body.placements-page .placement-company-grid-remaining{
+    width:min(100%,440px)!important;
+    max-width:440px!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    grid-auto-rows:58px!important;
+    column-gap:20px!important;
+    row-gap:26px!important;
+  }
+  body.placements-page .company-badge-grid.placement-company-grid .company-badge-img,
+  body.placements-page .placement-company-grid .company-badge-img{
+    width:104px!important;
+    max-width:104px!important;
+    height:40px!important;
+    min-height:40px!important;
+    max-height:40px!important;
+  }
+  .trusted-company-band .company-logo-set,
+  .company-logo-set{
+    gap:26px!important;
+    padding-right:26px!important;
+  }
+  .trusted-company-band .company-logo-strip .company-badge-img,
+  .company-logo-strip .company-badge-img{
+    width:98px!important;
+    min-width:98px!important;
+    max-width:98px!important;
+    height:38px!important;
+    min-height:38px!important;
+    max-height:38px!important;
+    flex-basis:98px!important;
+  }
+}
+
+@media (max-width:360px){
+  body.placements-page .placement-company-grid-start,
+  body.placements-page .placement-company-grid-remaining{
+    column-gap:14px!important;
+  }
+  body.placements-page .company-badge-grid.placement-company-grid .company-badge-img,
+  body.placements-page .placement-company-grid .company-badge-img{
+    width:94px!important;
+    max-width:94px!important;
+    height:38px!important;
+    min-height:38px!important;
+    max-height:38px!important;
+  }
+}
+
+/* =====================================================
+   TOP 10 LOGOS + HOME MARQUEE FINE-TUNE — 10 Jul 2026
+   Requested change only:
+   1) Increase the Top 10 company logos by exactly 3%.
+   2) Apply the same 3% increase to those ten logos in the
+      Home-page auto-scrolling strip.
+   3) Add more equal space between every marquee logo.
+   Remaining-company grid sizes are intentionally unchanged.
+   ===================================================== */
+
+/* Placements page: only the Top 10 logos are 3% larger. */
+body.placements-page .placement-company-grid-start .company-badge-img{
+  width:135.96px!important;      /* 132px × 1.03 */
+  max-width:135.96px!important;
+  height:49.44px!important;      /* 48px × 1.03 */
+  min-height:49.44px!important;
+  max-height:49.44px!important;
+}
+
+/* Home marquee: give every logo more breathing room. */
+.trusted-company-band .company-logo-set,
+.company-logo-set{
+  gap:52px!important;
+  padding-right:52px!important;
+}
+
+/* Home marquee: only the same Top 10 logos are 3% larger. */
+.trusted-company-band .company-logo-set .company-badge-img:nth-child(-n+10),
+.company-logo-set .company-badge-img:nth-child(-n+10){
+  width:121.54px!important;      /* 118px × 1.03 */
+  min-width:121.54px!important;
+  max-width:121.54px!important;
+  height:45.32px!important;      /* 44px × 1.03 */
+  min-height:45.32px!important;
+  max-height:45.32px!important;
+  flex:0 0 121.54px!important;
+}
+
+@media (min-width:641px) and (max-width:1023px){
+  body.placements-page .placement-company-grid-start .company-badge-img{
+    width:125.66px!important;    /* 122px × 1.03 */
+    max-width:125.66px!important;
+    height:47.38px!important;    /* 46px × 1.03 */
+    min-height:47.38px!important;
+    max-height:47.38px!important;
+  }
+  .trusted-company-band .company-logo-set,
+  .company-logo-set{
+    gap:44px!important;
+    padding-right:44px!important;
+  }
+  .trusted-company-band .company-logo-set .company-badge-img:nth-child(-n+10),
+  .company-logo-set .company-badge-img:nth-child(-n+10){
+    width:113.3px!important;     /* 110px × 1.03 */
+    min-width:113.3px!important;
+    max-width:113.3px!important;
+    height:43.26px!important;    /* 42px × 1.03 */
+    min-height:43.26px!important;
+    max-height:43.26px!important;
+    flex-basis:113.3px!important;
+  }
+}
+
+@media (max-width:640px){
+  body.placements-page .placement-company-grid-start .company-badge-img{
+    width:107.12px!important;    /* 104px × 1.03 */
+    max-width:107.12px!important;
+    height:41.2px!important;     /* 40px × 1.03 */
+    min-height:41.2px!important;
+    max-height:41.2px!important;
+  }
+  .trusted-company-band .company-logo-set,
+  .company-logo-set{
+    gap:36px!important;
+    padding-right:36px!important;
+  }
+  .trusted-company-band .company-logo-set .company-badge-img:nth-child(-n+10),
+  .company-logo-set .company-badge-img:nth-child(-n+10){
+    width:100.94px!important;    /* 98px × 1.03 */
+    min-width:100.94px!important;
+    max-width:100.94px!important;
+    height:39.14px!important;    /* 38px × 1.03 */
+    min-height:39.14px!important;
+    max-height:39.14px!important;
+    flex-basis:100.94px!important;
+  }
+}
+
+@media (max-width:360px){
+  body.placements-page .placement-company-grid-start .company-badge-img{
+    width:96.82px!important;     /* 94px × 1.03 */
+    max-width:96.82px!important;
+    height:39.14px!important;    /* 38px × 1.03 */
+    min-height:39.14px!important;
+    max-height:39.14px!important;
+  }
+}

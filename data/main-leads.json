@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1783583113874-h7aqk2",
+    "type": "payment",
+    "name": "Test User",
+    "phone": "9876543210",
+    "email": "test@example.com",
+    "course": "Java Full Stack",
+    "duration": "3 Months",
+    "paymentType": "Full Course Payment",
+    "amount": "",
+    "message": "Test",
+    "sourcePage": "/",
+    "status": "new",
+    "createdAt": "2026-07-09T07:45:13.874Z"
+  },
+  {
+    "id": "1783583202396-6gomxv",
+    "type": "payment",
+    "name": "Monish.u",
+    "phone": "1111111111",
+    "email": "umonish2@gmail.com",
+    "course": "Python Developer",
+    "duration": "6 Months",
+    "paymentType": "Need Fee Details",
+    "amount": "₹15,000 / Balance ₹14,999",
+    "message": "need a details about fee",
+    "sourcePage": "/",
+    "status": "new",
+    "createdAt": "2026-07-09T07:46:42.396Z"
+  }
+]

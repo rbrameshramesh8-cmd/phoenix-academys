@@ -1,0 +1,16 @@
+Phoenix Academy - Course Syllabus Overview
+
+Java Full Stack: Core Java, OOP, JDBC, Spring Boot, REST APIs, MySQL, frontend integration, authentication, deployment and final enterprise web app project.
+Python Developer: Core Python, OOP, file handling, database connectivity, Flask/Django basics, REST APIs, automation mini projects and backend capstone project.
+Digital Marketing: SEO, Google Ads, Meta Ads, content strategy, social media marketing, analytics, lead generation funnels and campaign reporting dashboard.
+UI/UX Web Developer: Figma, user research, wireframes, design systems, prototypes, HTML, CSS, responsive layouts and portfolio case studies.
+MERN Full Stack: MongoDB, Express.js, React.js, Node.js, JWT authentication, CRUD apps, API integration, deployment and capstone project.
+Full Stack: HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, APIs, authentication, deployment and final e-commerce project.
+
+Course Fees:
+3 Months: ₹14,999
+6 Months: ₹29,999
+EMI/Advance option: 50% advance with WhatsApp payment notification support.
+
+Every course includes practical assignments, mentor guidance, real-time project training, resume support, mock interviews and placement assistance.
+Contact: +91 99867 62311 | info@phoenixacademys.com

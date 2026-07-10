@@ -1,0 +1,12 @@
+Phoenix payment/EMI flow added
+
+Current default settings inside public/js/main.js:
+- WhatsApp number: +91 99867 62311
+- UPI ID placeholder: 9986762311@upi
+- 3 Months fee: ₹14,999
+- 6 Months fee: ₹29,999
+- EMI advance: 50%
+- Balance reminder: after 20 days
+
+To use real online collection, update PHOENIX_PAYMENT_CONFIG.upiId with your verified business UPI ID.
+For Razorpay/PhonePe/Instamojo live gateway, add your real API keys/server verification before accepting payments.

@@ -1,0 +1,9 @@
+Phoenix Academy company logo update — 10 July 2026
+
+Updated:
+- Reduced every company logo in the home-page auto-scrolling strip.
+- Reduced every recruiter logo in the Placements page grids.
+- Added consistent horizontal and vertical spacing.
+- Kept all logos transparent with no background card, border, cut line, or shadow.
+- Added responsive sizing for desktop, tablet, mobile, and small mobile screens.
+- Kept existing pages, forms, popups, navigation, animations, and JavaScript functions unchanged.

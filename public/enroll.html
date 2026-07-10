@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply now for Phoenix Academy job-oriented IT courses in Bangalore. Enroll for Java, Python, Digital Marketing, UI/UX and MERN courses with placement support.">
+  <meta name="keywords" content="Phoenix Academy enroll, IT courses Bangalore admission, Java course enroll, Python course enroll, UI UX course enroll, Digital Marketing course enroll">
+  <meta name="robots" content="index, follow">
+  <title>Apply Now | Phoenix Academy</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body class="apply-page">
+<div id="navbar-placeholder"></div>
+
+<section class="page-hero green-page-hero grid-bg" style="min-height:360px;position:relative;overflow:hidden">
+  <div class="blob" style="width:520px;height:520px;background:#ff6500;top:-220px;right:-120px;opacity:.10"></div>
+  <div class="blob" style="width:380px;height:380px;background:#0a66c2;bottom:-160px;left:-100px;opacity:.10"></div>
+  <div class="wrap" style="padding:70px 24px;text-align:center;position:relative;z-index:1">
+    <div class="section-tag fade-in">ADMISSIONS OPEN</div>
+    <h1 class="fade-in" style="font-size:clamp(2.3rem,5vw,4.2rem);font-weight:900;margin:16px 0 16px;line-height:1.08" data-delay="1">
+      APPLY NOW<br><span class="gradient-text">RESERVE YOUR SEAT</span>
+    </h1>
+    <p class="fade-in" style="font-size:.86rem;max-width:720px;margin:0 auto;line-height:1.9" data-delay="2">
+      Fill this admission form once. Your details will go to Phoenix Academy and WhatsApp will open for instant counsellor follow-up.
+    </p>
+  </div>
+</section>
+
+<section style="padding:80px 0;background:#f5f7fb">
+  <div class="wrap">
+    <div class="grid-2col" style="display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);gap:28px;align-items:start">
+      <div class="payment-plan-card fade-in" style="align-items:flex-start">
+        <div>
+          <div class="section-tag">WHY APPLY TODAY</div>
+          <h2>Get career counselling, batch details and fee support in one step.</h2>
+          <p>Choose your course, select 3-month or 6-month duration, and submit the application. You can also request WhatsApp guidance or open the payment / EMI booking popup after selecting your course.</p>
+          <div class="contact-pay-points">
+            <div><img src="/assets/icons/check-circle.png" alt="" class="inline-icon"> Job-oriented syllabus and practical projects</div>
+            <div><img src="/assets/icons/whatsapp.png" alt="" class="inline-icon"> WhatsApp counselling and quick admission support</div>
+            <div><img src="/assets/icons/wallet.png" alt="" class="inline-icon"> 3 Months ₹14,999 / 6 Months ₹29,999 payment options</div>
+            <div><img src="/assets/icons/trophy.png" alt="" class="inline-icon"> Placement preparation, resume support and mock interviews</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-box enroll-modal-box fade-in" style="position:relative;max-width:none;width:100%" data-delay="1">
+        <div class="modal-eyebrow enroll-eyebrow"><img src="/assets/icons/lightning.png" alt="" class="inline-icon enroll-action-icon">APPLICATION FORM</div>
+        <h3 class="enroll-modal-title">Course Admission</h3>
+        <p class="enroll-modal-subtitle">Enter the correct contact details so the admissions team can call or WhatsApp you.</p>
+
+        <div class="form-group"><label class="form-label">FULL NAME *</label><input type="text" id="ep-name" class="form-input" placeholder="Your full name"></div>
+        <div class="input-row">
+          <div class="form-group"><label class="form-label">EMAIL *</label><input type="email" id="ep-email" class="form-input" placeholder="your@email.com"></div>
+          <div class="form-group"><label class="form-label">PHONE / WHATSAPP *</label><input type="tel" id="ep-phone" class="form-input" placeholder="9XXXXXXXXX"></div>
+        </div>
+
+        <div class="input-row">
+          <div class="form-group">
+            <label class="form-label">COURSE *</label>
+            <select id="ep-course" class="form-input">
+              <option value="Java Full Stack">Java Full Stack</option>
+              <option value="Python Developer">Python Developer</option>
+              <option value="Digital Marketing">Digital Marketing</option>
+              <option value="UI/UX Web Developer">UI/UX Web Developer</option>
+              <option value="MERN Full Stack">MERN Full Stack</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">DURATION *</label>
+            <select id="ep-duration" class="form-input">
+              <option value="3 Months">3 Months · ₹14,999</option>
+              <option value="6 Months">6 Months · ₹29,999</option>
+            </select>
+          </div>
+        </div>
+
+        <button onclick="submitEnrollPage()" class="btn-primary enroll-submit-btn" id="ep-btn" type="button"><img src="/assets/icons/send.png" alt="" class="inline-icon enroll-action-icon">SUBMIT APPLICATION →</button>
+
+        <div class="enroll-quick-actions" aria-label="Quick contact actions">
+          <a href="https://wa.me/919986762311?text=Hi%20Phoenix%20Academy%2C%20I%20want%20to%20apply%20for%20a%20course." target="_blank" rel="noopener" class="enroll-quick-action whatsapp"><img src="/assets/icons/whatsapp.png" alt="">WhatsApp</a>
+          <a href="tel:+919986762311" class="enroll-quick-action call"><img src="/assets/icons/phone-call.png" alt="">Call</a>
+          <button type="button" class="enroll-quick-action payment" onclick="openEnrollPagePayment()"><img src="/assets/icons/wallet.png" alt="">Payment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<div id="toast" class="toast"></div>
+<a href="https://wa.me/919986762311?text=Hi%20Phoenix%20Academy%2C%20I%20am%20interested%20in%20your%20courses." target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Connect on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+</a>
+<a href="#" class="back-top" id="back-top">↑</a>
+
+<script src="/js/components.js"></script>
+<script src="/js/main.js"></script>
+<script>
+function enrollPageMessage(payload) {
+  return [
+    'Phoenix Website Enrollment Request',
+    `Name: ${payload.name}`,
+    `Phone: ${payload.phone}`,
+    `Email: ${payload.email}`,
+    `Course: ${payload.course}`,
+    `Duration: ${payload.duration}`,
+    `Submitted: ${new Date().toLocaleString('en-IN')}`
+  ].join('\n');
+}
+function openEnrollPageWhatsApp(payload) {
+  const url = 'https://wa.me/919986762311?text=' + encodeURIComponent(enrollPageMessage(payload));
+  const win = window.open(url, '_blank', 'noopener,noreferrer');
+  if (!win) window.location.href = url;
+}
+function openEnrollPagePayment() {
+  const course = document.getElementById('ep-course')?.value || 'General Course';
+  if (typeof openPaymentModal === 'function') openPaymentModal(course);
+}
+async function submitEnrollPage() {
+  const name = document.getElementById('ep-name').value.trim();
+  const email = document.getElementById('ep-email').value.trim();
+  const phone = document.getElementById('ep-phone').value.trim();
+  const course = document.getElementById('ep-course').value;
+  const duration = document.getElementById('ep-duration').value;
+  if (!name || !email || !phone || !course || !duration) {
+    if (typeof showToast === 'function') showToast('Please fill all required fields.', 'error');
+    return;
+  }
+  if (typeof isValidIndianMobile === 'function' && !isValidIndianMobile(phone)) {
+    if (typeof showToast === 'function') showToast('Phone number must be exactly 10 digits.', 'error');
+    return;
+  }
+  const payload = { name, email, phone, course, duration };
+  const btn = document.getElementById('ep-btn');
+  if (btn) { btn.disabled = true; btn.textContent = 'SENDING...'; }
+  try {
+    const res = await fetch('/api/enroll', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if (!data.success) throw new Error(data.message || 'Unable to send');
+    openEnrollPageWhatsApp(payload);
+    if (typeof showToast === 'function') showToast('Application sent to Phoenix Academy + WhatsApp. ✅', 'success');
+  } catch (err) {
+    openEnrollPageWhatsApp(payload);
+    if (typeof showToast === 'function') showToast('Website network issue, but WhatsApp opened. ✅', 'success');
+  }
+  if (btn) { btn.disabled = false; btn.innerHTML = '<img src="/assets/icons/send.png" alt="" class="inline-icon enroll-action-icon">SUBMIT APPLICATION →'; }
+}
+</script>
+</body>
+</html>

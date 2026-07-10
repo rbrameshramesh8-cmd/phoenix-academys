@@ -1,0 +1,106 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+# ── API redirects: /api/* → Netlify Functions ──
+[[redirects]]
+  from = "/api/courses"
+  to = "/.netlify/functions/courses"
+  status = 200
+
+[[redirects]]
+  from = "/api/courses/:id"
+  to = "/.netlify/functions/courses"
+  status = 200
+
+[[redirects]]
+  from = "/api/contact"
+  to = "/.netlify/functions/contact"
+  status = 200
+
+[[redirects]]
+  from = "/api/demo"
+  to = "/.netlify/functions/demo"
+  status = 200
+
+[[redirects]]
+  from = "/api/enroll"
+  to = "/.netlify/functions/enroll"
+  status = 200
+
+[[redirects]]
+  from = "/api/stats"
+  to = "/.netlify/functions/stats"
+  status = 200
+
+[[redirects]]
+  from = "/api/main-lead"
+  to = "/.netlify/functions/main-lead"
+  status = 200
+
+# ── Clean URL routing: /about → /about.html ──
+[[redirects]]
+  from = "/courses"
+  to = "/courses.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/demo"
+  to = "/demo.html"
+  status = 200
+
+[[redirects]]
+  from = "/placements"
+  to = "/placements.html"
+  status = 200
+
+[[redirects]]
+  from = "/testimonials"
+  to = "/testimonials.html"
+  status = 200
+
+[[redirects]]
+  from = "/apply"
+  to = "/enroll.html"
+  status = 200
+
+[[redirects]]
+  from = "/enroll"
+  to = "/enroll.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/refund"
+  to = "/refund.html"
+  status = 200
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 200
+
+# ── 404 fallback ──
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
