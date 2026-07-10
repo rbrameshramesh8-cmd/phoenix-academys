@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🔥 Phoenix Academy — Website
 
 Bangalore's premier IT training institute website.
@@ -140,3 +141,6 @@ Latest footer/home course fix:
 - Footer brand changed to PHOENIX orange + Academy black beside the logo.
 - Footer bird logo background changed to dark navy.
 - Footer contact details aligned into clear icon/text rows.
+=======
+# phoenix-academys
+>>>>>>> 5e578b6ab5b6b97c6908e77ea3c14ab59aa20e32
